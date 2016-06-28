@@ -1,0 +1,20 @@
+{
+  "name": "baseline.css",
+  "description": "Opinionated baseline stylesheet",
+  "version": "0.1.0",
+  "license": "Unlicense",
+  "homepage": "https://github.com/ryanmorr/baseline.css",
+  "main": "baseline.css",
+  "author": {
+    "name": "Ryan Morr",
+    "email": "rm.morr@gmail.com",
+    "url": "http://ryanmorr.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ryanmorr/baseline.css.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ryanmorr/baseline.css/issues"
+  }
+}
