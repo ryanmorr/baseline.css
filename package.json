@@ -4,7 +4,7 @@
   "version": "0.1.0",
   "license": "Unlicense",
   "homepage": "https://github.com/ryanmorr/baseline.css",
-  "main": "baseline.css",
+  "main": "dist/baseline.css",
   "author": {
     "name": "Ryan Morr",
     "email": "rm.morr@gmail.com",
@@ -19,7 +19,7 @@
   },
   "scripts": {
     "lint": "stylelint src/baseline.css",
-    "build": "postcss --use postcss-cssnext --use postcss-clean -o dist/baseline.css src/baseline.css"
+    "build": "postcss --use postcss-cssnext -o dist/baseline.css src/baseline.css && postcss --use postcss-clean -o dist/baseline.min.css dist/baseline.css"
   },
   "devDependencies": {
     "postcss": "^5.0.21",
