@@ -16,5 +16,11 @@
   },
   "bugs": {
     "url": "https://github.com/ryanmorr/baseline.css/issues"
+  },
+  "scripts": {
+    "lint": "stylelint src/baseline.css"
+  },
+  "devDependencies": {
+    "stylelint": "^6.7.1"
   }
 }
