@@ -112,5 +112,34 @@
     </h2>
     <h3 class="Test-it">The page should always fill at least the entire height of the viewport.</h3>
 
+    <!-- Global -->
+
+    <h2 class="Test-describe"><code>*</code></h2>
+    <h3 class="Test-it">Elements should have no margin, padding, or border.</h3>
+    <div class="Test-run highlight">
+        <div style="width: 100px; height: 50px"></div>
+    </div>
+
+    <h3 class="Test-it">Elements should inherit their typography.</h3>
+    <div class="Test-run">
+        <p>Lacus ac ligula pulvinar elit mauris ad eget quisque platea mi nam proin a quam adipiscing.</p>
+    </div>
+
+    <h2 class="Test-describe">
+        <code>*</code>,
+        <code>::before</code>, 
+        <code>::after</code>
+    </h2>
+    <h3 class="Test-it">Elements should have a box-sizing of border-box by default.</h3>
+    <div class="Test-run">
+        <div style="width: 50px; height: 50px; padding: 10px; margin: 5px; border: 2px solid #ccc"></div>
+    </div>
+
+    <h3 class="Test-it">Elements should inherit their box-sizing.</h3>
+    <div class="Test-run">
+        <div style="box-sizing:content-box">
+            <div style="width: 50px; height: 50px; padding: 10px; margin: 5px; border: 2px solid #ccc"></div>
+        </div>
+    </div>
 
 </div>

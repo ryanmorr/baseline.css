@@ -66,6 +66,35 @@ body {
 }
 
 /* ------------------------------------------------------------------ *\
+    Global
+\* ------------------------------------------------------------------ */
+
+/**
+ * 1. Remove the margin, padding, and border for all elements
+ *    by default
+ * 2. Inherit the typography of the parent element
+ */
+
+* {
+    margin: 0; /* [1] */
+    padding: 0; /* [1] */
+    border: 0; /* [1] */
+    font: inherit; /* [2] */
+}
+
+/**
+ * Allow elements to inherit their box model to take advantage of
+ * `border-box` by default with the added flexibility of being able
+ * to override it where necessary
+ */
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+/* ------------------------------------------------------------------ *\
     Print
 \* ------------------------------------------------------------------ */
 
