@@ -1,11 +1,5 @@
 /*! baseline.css v0.1.0 | https://github.com/ryanmorr/baseline.css */
 
-/**
- * Define the character encoding for this style sheet
- */
-
-@charset "UTF-8";
-
 /* ------------------------------------------------------------------ *\
     Variables
 \* ------------------------------------------------------------------ */
@@ -18,25 +12,48 @@
 :root {
     --font-color: #333;
     --font-size: 1.6em;
-    --line-height: 1.6;
     --font-family: sans-serif;
+    --line-height: 1.6;
+    --page-min-width: 300px;
 }
 
 /* ------------------------------------------------------------------ *\
-    Global
+    Page
 \* ------------------------------------------------------------------ */
 
 /**
- * Apply a base font size of 10 pixels to better facilitate em units
- * by simplifying calculations (1.4em = 14px)
+ * Define the character encoding for the stylesheet
+ */
+
+@charset "UTF-8";
+
+/**
+ * 1. Ensure the page's width cannot be minimized below the specified
+ *    breakpoint
+ * 2. Force scrollbars to always be visible to prevent awkward ‘jumps’
+ *    when navigating between pages that do/do not have enough content
+ *    to produce scrollbars naturally
+ * 3. Force a scrollbar that is always visible and pushes the content
+ *    (not overlays it) in Edge 12+ and IE 10
+ * 4. Globally remove the tap highlight color in iOS and Android
+ * 5. Optimize for responsive design by resetting the box model to
+ *    include the padding and border within the declared width/height
+ * 6. Apply a base font size of 10 pixels to better facilitate em
+ *    units by simplifying calculations (1.4em = 14px)
  */
 
 html {
-    font-size: 10px;
+    min-width: var(--page-min-width); /* [1] */
+    overflow-y: scroll; /* [2] */
+    -ms-overflow-style: scrollbar; /* [3] */
+    -webkit-tap-highlight-color: transparent; /* [4] */
+    box-sizing: border-box; /* [5] */
+    font-size: 10px; /* [6] */
 }
 
 /**
- * Define global font styles and line height
+ * Set the default typography for the entire project based on
+ * the default variables
  */
 
 body {
@@ -46,13 +63,23 @@ body {
     line-height: var(--line-height);
 }
 
+/**
+ * Ensure the page always fills at least the entire height of
+ * the viewport
+ */
+
+html,
+body {
+    min-height: 100%;
+}
+
 /* ------------------------------------------------------------------ *\
     Print
 \* ------------------------------------------------------------------ */
 
 /**
  * Optimize the page for printing
- * Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css
+ * Source: https://github.com/h5bp/html5-boilerplate
  */
 
 @media print {
