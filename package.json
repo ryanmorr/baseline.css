@@ -19,7 +19,9 @@
   },
   "scripts": {
     "lint": "stylelint src/baseline.css",
-    "build": "postcss --use postcss-cssnext -o dist/baseline.css src/baseline.css && postcss --use postcss-clean -o dist/baseline.min.css dist/baseline.css"
+    "compile": "postcss --use postcss-cssnext -o dist/baseline.css src/baseline.css",
+    "minify": "postcss --use postcss-clean -o dist/baseline.min.css dist/baseline.css",
+    "build": "npm run compile && npm run minify"
   },
   "devDependencies": {
     "postcss": "^5.0.21",
