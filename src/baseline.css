@@ -1,12 +1,24 @@
 /*! baseline.css v0.1.0 | https://github.com/ryanmorr/baseline.css */
 
+/**
+ * Define the character encoding for the stylesheet
+ */
+
+@charset "UTF-8";
+
+/**
+ * Build on top of `normalize.css` for a consistent base layer
+ */
+
+@import "normalize.css";
+
 /* ------------------------------------------------------------------ *\
     Variables
 \* ------------------------------------------------------------------ */
 
 /**
- * All opinionated-based styles are defined using the following
- * variables, adjust per your preferences
+ * Variables for some of the opinionated-based styles, adjust
+ * per your preferences
  */
 
 :root {
@@ -20,12 +32,6 @@
 /* ------------------------------------------------------------------ *\
     Page
 \* ------------------------------------------------------------------ */
-
-/**
- * Define the character encoding for the stylesheet
- */
-
-@charset "UTF-8";
 
 /**
  * 1. Ensure the page's width cannot be minimized below the specified
