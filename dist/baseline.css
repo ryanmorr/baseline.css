@@ -497,8 +497,8 @@ body {
 \* ------------------------------------------------------------------ */
 
 /**
- * 1. Remove the margin, padding, and border for all elements
- *    by default
+ * 1. Remove the margin, padding, border, and outline for all
+ *    elements by default
  * 2. Inherit the typography of the parent element
  */
 
@@ -506,6 +506,7 @@ body {
     margin: 0; /* [1] */
     padding: 0; /* [1] */
     border: 0; /* [1] */
+    outline: 0; /* [1] */
     font: inherit; /* [2] */
 }
 
@@ -519,6 +520,57 @@ body {
 ::before,
 ::after {
     box-sizing: inherit;
+}
+
+/* ------------------------------------------------------------------ *\
+    Embedded Content
+\* ------------------------------------------------------------------ */
+
+/*
+ * Remove the default white space at the bottom of the element
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/**
+ * Responsive media elements that maintain their aspect ratios
+ */
+
+audio,
+embed,
+img,
+object,
+video {
+    max-width: 100%;
+}
+
+embed,
+img,
+object,
+video {
+    height: auto;
+}
+
+embed,
+object {
+    height: 100%;
+}
+
+/**
+ * if `width` and/or `height` attributes are preset, disable the
+ * image's responsive behavior
+ */
+
+img[width],
+img[height] {
+    max-width: none;
 }
 
 /* ------------------------------------------------------------------ *\
