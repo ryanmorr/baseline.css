@@ -587,6 +587,50 @@ table {
 }
 
 /* ------------------------------------------------------------------ *\
+    Interaction
+\* ------------------------------------------------------------------ */
+
+/**
+ * Prevent the focus outline on elements that cannot be navigated
+ * to via keyboard
+ */
+
+[tabindex="-1"]:focus {
+    outline: none !important;
+}
+
+/**
+ * Remove click delay on actionable elements
+ */
+
+a,
+area,
+button,
+input,
+label,
+select,
+textarea,
+[tabindex]:not([tabindex="-1"]) {
+    -ms-touch-action: manipulation;
+        touch-action: manipulation;
+}
+
+/*
+ * Allow hidden elements to be accessible when focused
+ * Source: https://github.com/10up/sanitize.css
+ */
+
+[hidden][aria-hidden="false"] {
+    clip: rect(0, 0, 0, 0);
+    display: inherit;
+    position: absolute;
+}
+
+[hidden][aria-hidden="false"]:focus {
+    clip: auto;
+}
+
+/* ------------------------------------------------------------------ *\
     Print
 \* ------------------------------------------------------------------ */
 

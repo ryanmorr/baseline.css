@@ -3,7 +3,6 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>baseline.css tests</title>
-<link rel="stylesheet" href="https://cdn.rawgit.com/necolas/normalize.css/master/normalize.css">
 <link rel="stylesheet" href="dist/baseline.min.css">
 <style>
     /*! suit-test v1.0.0 | MIT License | github.com/suitcss */
@@ -205,6 +204,35 @@
                 </tr>
             </tbody>
         </table>
+    </div>
+
+    <!-- Interaction -->
+
+    <h2 class="Test-describe"><code>[tabindex="-1"]:focus</code></h2>
+    <h3 class="Test-it">Should not be focusable via keyboard navigation.</h3>
+    <div class="Test-run highlight">
+        <a href="#void2" tabindex="-1">link</a>
+    </div>
+
+    <h2 class="Test-describe">
+        <code>a</code>, 
+        <code>area</code>, 
+        <code>button</code>, 
+        <code>input</code>, 
+        <code>label</code>, 
+        <code>select</code>, 
+        <code>textarea</code>, 
+        <code>[tabindex]:not([tabindex="-1"])</code>
+    </h2>
+    <h3 class="Test-it">Should remove the click delay on mobile devices.</h3>
+    <div class="Test-run highlight">
+        <a href="#void3">link</a>
+    </div>
+
+    <h2 class="Test-describe"><code>[hidden][aria-hidden="false"]</code></h2>
+    <h3 class="Test-it">Should allow hidden elements to be accessible when focused.</h3>
+    <div class="Test-run highlight">
+        <a href="#void4" aria-hidden="false" hidden>link</a>
     </div>
 
 </div>
