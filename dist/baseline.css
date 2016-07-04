@@ -544,16 +544,20 @@ video {
  */
 
 audio,
+canvas,
 embed,
 img,
 object,
+svg,
 video {
     max-width: 100%;
 }
 
+canvas,
 embed,
 img,
 object,
+svg,
 video {
     height: auto;
 }

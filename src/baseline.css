@@ -131,16 +131,20 @@ video {
  */
 
 audio,
+canvas,
 embed,
 img,
 object,
+svg,
 video {
     max-width: 100%;
 }
 
+canvas,
 embed,
 img,
 object,
+svg,
 video {
     height: auto;
 }
@@ -156,7 +160,9 @@ object {
  */
 
 img[width],
-img[height] {
+img[height],
+svg[width],
+svg[height] {
     max-width: none;
 }
 
