@@ -223,6 +223,36 @@ textarea,
 }
 
 /* ------------------------------------------------------------------ *\
+    Cursor
+\* ------------------------------------------------------------------ */
+
+/**
+ * Indicate that an element is loading
+ */
+
+[aria-busy="true"] {
+    cursor: progress;
+}
+
+/**
+ * Indicate that an element is a helpful resource
+ */
+
+abbr[title],
+dfn[title] {
+    cursor: help;
+}
+
+/*
+ * Indicate that an element is actionable
+ */
+
+[role="button"],
+[aria-controls] {
+    cursor: pointer;
+}
+
+/* ------------------------------------------------------------------ *\
     Print
 \* ------------------------------------------------------------------ */
 

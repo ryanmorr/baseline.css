@@ -235,4 +235,30 @@
         <a href="#void4" aria-hidden="false" hidden>link</a>
     </div>
 
+    <!-- Cursor -->
+
+    <h2 class="Test-describe"><code>[aria-busy="true"]</code></h2>
+    <h3 class="Test-it">Should indicate that an element is in a busy/loading state with a loading cursor.</h3>
+    <div class="Test-run highlight">
+        <div style="width: 200px; height: 50px" aria-busy="true"></div>
+    </div>
+
+    <h2 class="Test-describe">
+        <code>abbr[title]</code>, 
+        <code>dfn[title]</code>
+    </h2>
+    <h3 class="Test-it">Should indicate that an element is a helpful resource with the help cursor.</h3>
+    <div class="Test-run">
+        <abbr title="Hypertext Markup Language">HTML</abbr>
+    </div>
+
+    <h2 class="Test-describe">
+        <code>[role="button"]</code>, 
+        <code>[aria-controls]</code>
+    </h2>
+    <h3 class="Test-it">Should indicate that an element is a button/control with a pointer cursor.</h3>
+    <div class="Test-run">
+        <div role="button">Button</div>
+    </div>
+
 </div>
