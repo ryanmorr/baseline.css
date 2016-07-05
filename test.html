@@ -75,6 +75,8 @@
     <!-- Page -->
 
     <h2 class="Test-describe"><code>html</code></h2>
+    <h3 class="Test-it">The page should have a default (arrow) cursor</h3>
+
     <h3 class="Test-it">The page should not scale below 300px wide</h3>
 
     <h3 class="Test-it">The page should force a vertical scrollbar</h3>
@@ -113,8 +115,12 @@
 
     <!-- Global -->
 
-    <h2 class="Test-describe"><code>*</code></h2>
-    <h3 class="Test-it">Elements should have no margin, padding, or border</h3>
+    <h2 class="Test-describe">
+        <code>*</code>,
+        <code>::before</code>, 
+        <code>::after</code>
+    </h2>
+    <h3 class="Test-it">Should have no default styling from the browser (padding, margin, border, outline, background)</h3>
     <div class="Test-run highlight">
         <div style="width: 100px; height: 50px"></div>
     </div>
@@ -124,11 +130,6 @@
         <p>Lacus ac ligula pulvinar elit mauris ad eget quisque platea mi nam proin a quam adipiscing</p>
     </div>
 
-    <h2 class="Test-describe">
-        <code>*</code>,
-        <code>::before</code>, 
-        <code>::after</code>
-    </h2>
     <h3 class="Test-it">Elements should have a box-sizing of border-box by default</h3>
     <div class="Test-run">
         <div style="width: 50px; height: 50px; padding: 10px; margin: 5px; border: 2px solid #ccc"></div>

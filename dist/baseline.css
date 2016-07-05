@@ -439,7 +439,7 @@ textarea {
 
 /**
  * Variables for some of the opinionated-based styles, adjust
- * per your preferences
+ * accordingly
  */
 
 /* ------------------------------------------------------------------ *\
@@ -447,27 +447,29 @@ textarea {
 \* ------------------------------------------------------------------ */
 
 /**
- * 1. Ensure the page's width cannot be minimized below the specified
+ * 1. Add the default cursor in all browsers.
+ * 2. Ensure the page's width cannot be minimized below the specified
  *    breakpoint
- * 2. Force scrollbars to always be visible to prevent awkward ‘jumps’
+ * 3. Force scrollbars to always be visible to prevent awkward ‘jumps’
  *    when navigating between pages that do/do not have enough content
  *    to produce scrollbars naturally
- * 3. Force a scrollbar that is always visible and pushes the content
+ * 4. Force a scrollbar that is always visible and pushes the content
  *    (not overlays it) in Edge 12+ and IE 10
- * 4. Globally remove the tap highlight color in iOS and Android
- * 5. Optimize for responsive design by resetting the box model to
+ * 5. Globally remove the tap highlight color in iOS and Android
+ * 6. Optimize for responsive design by resetting the box model to
  *    include the padding and border within the declared width/height
- * 6. Apply a base font size of 10 pixels to better facilitate em
+ * 7. Apply a base font size of 10 pixels to better facilitate em
  *    units by simplifying calculations (1.4em = 14px)
  */
 
 html {
-    min-width: 300px; /* [1] */
-    overflow-y: scroll; /* [2] */
-    -ms-overflow-style: scrollbar; /* [3] */
-    -webkit-tap-highlight-color: transparent; /* [4] */
-    box-sizing: border-box; /* [5] */
-    font-size: 10px; /* [6] */
+    cursor: default; /* [1] */
+    min-width: 300px; /* [2] */
+    overflow-y: scroll; /* [3] */
+    -ms-overflow-style: scrollbar; /* [4] */
+    -webkit-tap-highlight-color: transparent; /* [5] */
+    box-sizing: border-box; /* [6] */
+    font-size: 10px; /* [7] */
 }
 
 /**
@@ -497,29 +499,26 @@ body {
 \* ------------------------------------------------------------------ */
 
 /**
- * 1. Remove the margin, padding, border, and outline for all
- *    elements by default
+ * 1. Remove the default styling in all browsers
  * 2. Inherit the typography of the parent element
+ * 3. Align the baseline of the element with the baseline of its parent
+ * 4. Allow elements to inherit their box model to take advantage
+ *    of `border-box` by default with the added flexibility of
+ *    being able to override it where necessary
  */
 
-* {
+*,
+::after,
+::before {
     margin: 0; /* [1] */
     padding: 0; /* [1] */
     border: 0; /* [1] */
     outline: 0; /* [1] */
+    background: transparent; /* [1] */
     font: inherit; /* [2] */
-}
-
-/**
- * Allow elements to inherit their box model to take advantage of
- * `border-box` by default with the added flexibility of being able
- * to override it where necessary
- */
-
-*,
-::before,
-::after {
-    box-sizing: inherit;
+    font-size: inherit; /* [2] */
+    vertical-align: baseline; /* [3] */
+    box-sizing: inherit; /* [4] */
 }
 
 /* ------------------------------------------------------------------ *\
@@ -544,20 +543,16 @@ video {
  */
 
 audio,
-canvas,
 embed,
 img,
 object,
-svg,
 video {
     max-width: 100%;
 }
 
-canvas,
 embed,
 img,
 object,
-svg,
 video {
     height: auto;
 }
@@ -573,9 +568,7 @@ object {
  */
 
 img[width],
-img[height],
-svg[width],
-svg[height] {
+img[height] {
     max-width: none;
 }
 
