@@ -142,6 +142,93 @@
         </div>
     </div>
 
+    <!-- Forms -->
+
+    <h2 class="Test-describe">
+        <code>button</code>, 
+        <code>input</code>, 
+        <code>select</code>, 
+        <code>textarea</code>
+    </h2>
+    <h3 class="Test-it">Should remove the default styling in all browsers</h3>
+    <div class="Test-run">
+        <button>Button</button>
+    </div>
+
+    <h2 class="Test-describe">
+        <code>button</code>, 
+        <code>label</code>, 
+        <code>input[type="button"]</code>, 
+        <code>input[type="submit"]</code>, 
+        <code>input[type="reset"]</code>, 
+        <code>input[type="file"]</code>, 
+        <code>input[type="image"]</code>
+    </h2>
+    <h3 class="Test-it">Should indicate that a form element is actionable with a pointer cursor</h3>
+    <div class="Test-run">
+        <label>Label</label>
+    </div>
+
+    <h2 class="Test-describe"><code>textarea</code></h2>
+    <h3 class="Test-it">Should allow only vertical resizing of textareas</h3>
+    <div class="Test-run">
+        <textarea style="border: 1px solid #ccc"></textarea>
+    </div>
+
+    <h2 class="Test-describe">
+        <code>select[multiple]</code>, 
+        <code>select[size]</code>
+    </h2>
+    <h3 class="Test-it">Should not have a fixed height or scrollbars</h3>
+    <div class="Test-run">
+        <select style="border: 1px solid #ccc" multiple>
+            <option>foo</option>
+            <option>bar</option>
+            <option>baz</option>
+        </select>
+    </div>
+
+    <h2 class="Test-describe">
+        <code>input</code>, 
+        <code>select</code>
+    </h2>
+    <h3 class="Test-it">Should align labels to the middle of the field</h3>
+    <div class="Test-run">
+        <label>Label</label>
+        <input type="text" style="border: 1px solid #ccc" />
+    </div>
+
+    <h2 class="Test-describe"><code>input[type="radio"]</code></h2>
+    <h3 class="Test-it">Should align labels with the radio button</h3>
+    <div class="Test-run">
+        <label>Label</label>
+        <input type="radio" />
+    </div>
+
+    <h2 class="Test-describe"><code>input[type="checkbox"]</code></h2>
+    <h3 class="Test-it">Should align labels with the checkbox</h3>
+    <div class="Test-run">
+        <label>Label</label>
+        <input type="checkbox" />
+    </div>
+
+    <h2 class="Test-describe">
+        <code>textarea</code>, 
+        <code>select[multiple]</code>, 
+        <code>select[size]</code>
+    </h2>
+    <h3 class="Test-it">Should align labels to the top of the field</h3>
+    <div class="Test-run">
+        <label>Label</label>
+        <textarea style="border: 1px solid #ccc; height: 50px;"></textarea>
+    </div>
+
+    <h2 class="Test-describe"><code>:disabled</code></h2>
+    <h3 class="Test-it">Should indicate than a form field element is disabled</h3>
+    <div class="Test-run">
+        <input type="text" size="10" style="border: 1px solid #ccc" disabled />
+    </div>
+
     <!-- Embedded Content -->
 
     <h2 class="Test-describe">
@@ -207,23 +294,6 @@
         </table>
     </div>
 
-    <!-- State -->
-
-    <h2 class="Test-describe"><code>:disabled</code></h2>
-    <h3 class="Test-it">Should indicate than a form field element is disabled</h3>
-    <div class="Test-run">
-        <input type="text" size="10" disabled />
-    </div>
-
-    <h2 class="Test-describe">
-        <code>[disabled]:not(:disabled)</code>, 
-        <code>[aria-disabled]:not(:disabled)</code>
-    </h2>
-    <h3 class="Test-it">Should indicate than a non-form element is disabled and prevent user interaction</h3>
-    <div class="Test-run">
-        <a href="#void-disabled" aria-disabled>disabled</a>
-    </div>
-
     <!-- Interaction -->
 
     <h2 class="Test-describe"><code>[tabindex="-1"]:focus</code></h2>
@@ -251,6 +321,15 @@
     <h3 class="Test-it">Should allow hidden elements to be accessible when focused</h3>
     <div class="Test-run highlight">
         <a href="#void4" aria-hidden="false" hidden>link</a>
+    </div>
+
+    <h2 class="Test-describe">
+        <code>[disabled]:not(:disabled)</code>, 
+        <code>[aria-disabled]:not(:disabled)</code>
+    </h2>
+    <h3 class="Test-it">Should indicate than a non-form element is disabled and prevent user interaction</h3>
+    <div class="Test-run">
+        <a href="#void-disabled" aria-disabled>disabled</a>
     </div>
 
     <!-- Cursor -->
