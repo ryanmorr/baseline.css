@@ -489,8 +489,8 @@ body {
  * the viewport
  */
 
-html,
-body {
+body,
+html {
     min-height: 100%;
 }
 
@@ -519,6 +519,28 @@ body {
     font-size: inherit; /* [2] */
     vertical-align: baseline; /* [3] */
     box-sizing: inherit; /* [4] */
+}
+
+/* ------------------------------------------------------------------ *\
+    ELements
+\* ------------------------------------------------------------------ */
+
+/**
+ * Remove default quotes
+ */
+
+blockquote,
+q {
+    quotes: none;
+}
+
+/**
+ * Indicate that an element is a helpful resource
+ */
+
+abbr[title],
+dfn[title] {
+    cursor: help;
 }
 
 /* ------------------------------------------------------------------ *\
@@ -590,9 +612,9 @@ input[type="checkbox"] {
     vertical-align: bottom;
 }
 
-textarea,
 select[multiple],
-select[size] {
+select[size],
+textarea {
     vertical-align: top;
 }
 
@@ -700,6 +722,39 @@ textarea,
         touch-action: manipulation;
 }
 
+/**
+ * Indicate that a non-form element is inoperable
+ * 2. Prevent user interaction
+ */
+
+[aria-disabled]:not(:disabled),
+[disabled]:not(:disabled) {
+    cursor: default; /* [1] */
+    opacity: 0.7; /* [1] */
+    pointer-events: none; /* [2] */
+}
+
+/* ------------------------------------------------------------------ *\
+    Accessibility
+\* ------------------------------------------------------------------ */
+
+/**
+ * Indicate that an element is loading
+ */
+
+[aria-busy="true"] {
+    cursor: progress;
+}
+
+/*
+ * Indicate that an element is actionable
+ */
+
+[aria-controls],
+[role="button"] {
+    cursor: pointer;
+}
+
 /*
  * Allow hidden elements to be accessible when focused
  * Source: https://github.com/10up/sanitize.css
@@ -713,48 +768,6 @@ textarea,
 
 [hidden][aria-hidden="false"]:focus {
     clip: auto;
-}
-
-/**
- * Indicate that a non-form element is inoperable
- * 2. Prevent user interaction
- */
-
-[disabled]:not(:disabled),
-[aria-disabled]:not(:disabled) {
-    cursor: default; /* [1] */
-    opacity: 0.7; /* [1] */
-    pointer-events: none; /* [2] */
-}
-
-/* ------------------------------------------------------------------ *\
-    Cursor
-\* ------------------------------------------------------------------ */
-
-/**
- * Indicate that an element is loading
- */
-
-[aria-busy="true"] {
-    cursor: progress;
-}
-
-/**
- * Indicate that an element is a helpful resource
- */
-
-abbr[title],
-dfn[title] {
-    cursor: help;
-}
-
-/*
- * Indicate that an element is actionable
- */
-
-[role="button"],
-[aria-controls] {
-    cursor: pointer;
 }
 
 /* ------------------------------------------------------------------ *\
