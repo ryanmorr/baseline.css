@@ -340,6 +340,16 @@ textarea,
     pointer-events: none; /* [2] */
 }
 
+/**
+ * Remove the text shadow on text selections
+ */
+
+::selection {
+    background-color: #b3d4fc;
+    color: #000;
+    text-shadow: none;
+}
+
 /* ------------------------------------------------------------------ *\
     Accessibility
 \* ------------------------------------------------------------------ */
