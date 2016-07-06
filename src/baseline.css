@@ -131,6 +131,39 @@ dfn[title] {
 }
 
 /* ------------------------------------------------------------------ *\
+    Tables
+\* ------------------------------------------------------------------ */
+
+/**
+ * Remove border separation and spacing
+ */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/**
+ * Align text to the top left of a table cell
+ */
+
+th,
+td {
+    text-align: left;
+    vertical-align: top;
+}
+
+/**
+ * Make text bold and align it to the bottom of table head cells
+ */
+
+thead th,
+thead td {
+    font-weight: bold;
+    vertical-align: bottom;
+}
+
+/* ------------------------------------------------------------------ *\
     Forms
 \* ------------------------------------------------------------------ */
 
@@ -265,19 +298,6 @@ object {
 img[width],
 img[height] {
     max-width: none;
-}
-
-/* ------------------------------------------------------------------ *\
-    Tables
-\* ------------------------------------------------------------------ */
-
-/**
- * Remove border separation and spacing
- */
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
 }
 
 /* ------------------------------------------------------------------ *\
