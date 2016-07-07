@@ -87,9 +87,10 @@ html {
 
 /**
  * 1. Remove the default styling in all browsers
- * 2. Inherit the typography of the parent element
- * 3. Align the baseline of the element with the baseline of its parent
- * 4. Allow elements to inherit their box model to take advantage
+ * 2. Remove repeating backgrounds in all browsers
+ * 3. Inherit the typography of the parent element
+ * 4. Align the baseline of the element with the baseline of its parent
+ * 5. Allow elements to inherit their box model to take advantage
  *    of `border-box` by default with the added flexibility of
  *    being able to override it where necessary
  */
@@ -102,10 +103,11 @@ html {
     border: 0; /* [1] */
     outline: 0; /* [1] */
     background: transparent; /* [1] */
-    font: inherit; /* [2] */
-    font-size: inherit; /* [2] */
-    vertical-align: baseline; /* [3] */
-    box-sizing: inherit; /* [4] */
+    background-repeat: no-repeat; /* [2] */
+    font: inherit; /* [3] */
+    font-size: inherit; /* [3] */
+    vertical-align: baseline; /* [4] */
+    box-sizing: inherit; /* [5] */
 }
 
 /* ------------------------------------------------------------------ *\
