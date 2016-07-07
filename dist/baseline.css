@@ -526,6 +526,15 @@ html {
 \* ------------------------------------------------------------------ */
 
 /**
+ * Remove the list style on nav lists in all browsers
+ */
+
+nav ol,
+nav ul {
+    list-style: none;
+}
+
+/**
  * Remove default quotes
  */
 
