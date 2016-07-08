@@ -23,9 +23,9 @@
 
 :root {
     --font-color: #333;
-    --font-size: 1.6em;
+    --font-size: 1.4em;
     --font-family: sans-serif;
-    --line-height: 1.6;
+    --line-height: 1.5;
     --page-min-width: 300px;
 }
 
@@ -45,8 +45,8 @@
  * 5. Globally remove the tap highlight color in iOS and Android
  * 6. Optimize for responsive design by resetting the box model to
  *    include the padding and border within the declared width/height
- * 7. Apply a base font size of 10 pixels to better facilitate em
- *    units by simplifying calculations (1.4em = 14px)
+ * 7. Apply a base font size of 10 pixels to better facilitate rem
+ *    units by simplifying calculations (1.4rem = 14px)
  */
 
 html {
@@ -54,7 +54,7 @@ html {
     min-width: var(--page-min-width); /* [2] */
     overflow-y: scroll; /* [3] */
     -ms-overflow-style: scrollbar; /* [4] */
-    -webkit-tap-highlight-color: transparent; /* [5] */
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* [5] */
     box-sizing: border-box; /* [6] */
     font-size: 10px; /* [7] */
 }
@@ -76,8 +76,8 @@ body {
  * the viewport
  */
 
-body,
-html {
+html,
+body {
     min-height: 100%;
 }
 
@@ -115,6 +115,15 @@ html {
 \* ------------------------------------------------------------------ */
 
 /**
+ * Remove border separation and spacing
+ */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/**
  * Remove the list style on nav lists in all browsers
  */
 
@@ -132,6 +141,14 @@ q {
     quotes: none;
 }
 
+blockquote::after,
+blockquote::before,
+q::after,
+q::before {
+    content: '';
+    content: none;
+}
+
 /**
  * Indicate that an element is a helpful resource
  */
@@ -139,39 +156,6 @@ q {
 abbr[title],
 dfn[title] {
     cursor: help;
-}
-
-/* ------------------------------------------------------------------ *\
-    Tables
-\* ------------------------------------------------------------------ */
-
-/**
- * Remove border separation and spacing
- */
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-/**
- * Align text to the top left of a table cell
- */
-
-th,
-td {
-    text-align: left;
-    vertical-align: top;
-}
-
-/**
- * Make text bold and align it to the bottom of table head cells
- */
-
-thead th,
-thead td {
-    font-weight: bold;
-    vertical-align: bottom;
 }
 
 /* ------------------------------------------------------------------ *\

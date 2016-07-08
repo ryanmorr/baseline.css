@@ -92,7 +92,7 @@
         <p>Lacus ac ligula pulvinar elit mauris ad eget quisque platea mi nam proin a quam adipiscing</p>
     </div>
 
-    <h3 class="Test-it">Should have a font size of 16px (1.6em)</h3>
+    <h3 class="Test-it">Should have a font size of 14px (1.4em)</h3>
     <div class="Test-run">
         <p>Lacus ac ligula pulvinar elit mauris ad eget quisque platea mi nam proin a quam adipiscing</p>
     </div>
@@ -102,14 +102,14 @@
         <p>Lacus ac ligula pulvinar elit mauris ad eget quisque platea mi nam proin a quam adipiscing</p>
     </div>
 
-    <h3 class="Test-it">Should have a line height of 1.6</h3>
+    <h3 class="Test-it">Should have a line height of 1.5</h3>
     <div class="Test-run">
         <p>Per tristique vestibulum pulvinar eget a sociosqu parturient adipiscing ipsum suspendisse pretium a vestibulum ullamcorper scelerisque bibendum a. Dictum commodo non risus per dolor imperdiet a ultrices scelerisque a porta adipiscing condimentum parturient massa placerat vulputate lobortis diam. Inceptos a a id id nascetur a elementum ac facilisis a condimentum suspendisse aliquam volutpat mi lobortis adipiscing tempus convallis adipiscing.</p>
     </div>
 
     <h2 class="Test-describe">
-        <code>body</code>, 
-        <code>html</code>
+        <code>html</code>, 
+        <code>body</code>
     </h2>
     <h3 class="Test-it">The page should always fill at least the entire height of the viewport</h3>
 
@@ -149,6 +149,27 @@
 
     <!-- Elements -->
 
+    <h2 class="Test-describe"><code>table</code></h2>
+    <h3 class="Test-it">A table should not have any border separation or spacing</h3>
+    <div class="Test-run highlight">
+        <table>
+            <thead>
+                <tr>
+                    <th>1</th>
+                    <th>2</th>
+                    <th>3</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
     <h2 class="Test-describe">
         <code>nav ol</code>, 
         <code>nav ul</code>
@@ -183,52 +204,6 @@
     <h3 class="Test-it">Should indicate that an element is a helpful resource with the help cursor</h3>
     <div class="Test-run">
         <abbr title="Hypertext Markup Language">HTML</abbr>
-    </div>
-
-    <!-- Tables -->
-
-    <h2 class="Test-describe"><code>table</code></h2>
-    <h3 class="Test-it">A table should not have any border separation or spacing</h3>
-    <div class="Test-run highlight">
-        <table>
-            <tr>
-                <td>foo</td>
-                <td>bar</td>
-                <td>baz</td>
-            </tr>
-        </table>
-    </div>
-
-    <h2 class="Test-describe">
-        <code>th</code>, 
-        <code>td</code>
-    </h2>
-    <h3 class="Test-it">Should align text to the top left of a table cell</h3>
-    <div class="Test-run highlight">
-        <table>
-            <tr>
-                <th style="height: 50px">foo</th>
-                <td>bar</td>
-                <td>baz</td>
-            </tr>
-        </table>
-    </div>
-
-    <h2 class="Test-describe">
-        <code>thead th</code>, 
-        <code>thead td</code>
-    </h2>
-    <h3 class="Test-it">Should make text bold and align it to the bottom of table head cells</h3>
-    <div class="Test-run highlight">
-        <table>
-            <thead>
-                <tr>
-                    <th style="height: 50px">foo</th>
-                    <th>bar</th>
-                    <th>baz</th>
-                </tr>
-            </thead>
-        </table>
     </div>
 
     <!-- Forms -->
