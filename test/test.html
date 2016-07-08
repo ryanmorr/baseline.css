@@ -120,7 +120,7 @@
         <code>::before</code>, 
         <code>::after</code>
     </h2>
-    <h3 class="Test-it">Should have no default styling from the browser (padding, margin, border, outline, background)</h3>
+    <h3 class="Test-it">Should have no default styling from the browser (padding, margin, border, background)</h3>
     <div class="Test-run highlight">
         <div style="width: 100px; height: 50px"></div>
     </div>
@@ -291,6 +291,12 @@
     <h3 class="Test-it">Should indicate than a form field element is disabled</h3>
     <div class="Test-run">
         <input type="text" size="10" style="border: 1px solid #ccc" disabled />
+    </div>
+
+    <h2 class="Test-describe"><code>:focus:invalid</code></h2>
+    <h3 class="Test-it">Should indicate than a form field element is invalid</h3>
+    <div class="Test-run">
+        <label>Email:</label> <input type="email" size="10" style="border: 1px solid #ccc" />
     </div>
 
     <!-- Embedded Content -->

@@ -514,7 +514,6 @@ body {
     margin: 0; /* [1] */
     padding: 0; /* [1] */
     border: 0; /* [1] */
-    outline: 0; /* [1] */
     background: transparent; /* [1] */
     background-repeat: no-repeat; /* [2] */
     font: inherit; /* [3] */
@@ -655,6 +654,14 @@ textarea {
     opacity: 0.7; /* [1] */
     cursor: not-allowed; /* [1] */
     resize: none; /* [2] */
+}
+
+/*
+ * Indicate on focus that a field is invalid
+ */
+
+:focus:invalid {
+    outline-color: #f44336;
 }
 
 /* ------------------------------------------------------------------ *\
