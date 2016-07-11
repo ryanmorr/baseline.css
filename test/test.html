@@ -147,6 +147,63 @@
         </div>
     </div>
 
+    <!-- Typography -->
+
+    <h2 class="Test-describe"><code>h1</code></h2>
+    <h3 class="Test-it">Should be bold and have a font size of 2.6em</h3>
+    <div class="Test-run">
+        <h1>Heading 1</h1>
+    </div>
+
+    <h2 class="Test-describe"><code>h2</code></h2>
+    <h3 class="Test-it">Should be bold and have a font size of 2.2em</h3>
+    <div class="Test-run">
+        <h2>Heading 2</h2>
+    </div>
+
+    <h2 class="Test-describe"><code>h3</code></h2>
+    <h3 class="Test-it">Should be bold and have a font size of 1.8em</h3>
+    <div class="Test-run">
+        <h3>Heading 3</h3>
+    </div>
+
+    <h2 class="Test-describe"><code>h4</code></h2>
+    <h3 class="Test-it">Should be bold and have a font size of 1.6em</h3>
+    <div class="Test-run">
+        <h4>Heading 4</h4>
+    </div>
+
+    <h2 class="Test-describe"><code>h5</code></h2>
+    <h3 class="Test-it">Should be bold and have a font size of 1.4em</h3>
+    <div class="Test-run">
+        <h5>Heading 5</h5>
+    </div>
+
+    <h2 class="Test-describe"><code>h6</code></h2>
+    <h3 class="Test-it">Should be bold and have a font size of 1.2em</h3>
+    <div class="Test-run">
+        <h6>Heading 6</h6>
+    </div>
+
+    <h2 class="Test-describe"><code>p + *</code></h2>
+    <h3 class="Test-it">Should restore the margin between a paragraph and the next element</h3>
+    <div class="Test-run">
+        <p>Lacus ac ligula pulvinar elit mauris ad eget</p>
+        <p>quisque platea mi nam proin a quam adipiscing</p>
+    </div>
+
+    <h2 class="Test-describe"><code>p:empty</code></h2>
+    <h3 class="Test-it">Empty paragraphs should be hidden</h3>
+    <div class="Test-run">
+        <p></p>
+    </div>
+
+    <h2 class="Test-describe"><code>@media (max-width: 767px)</code></h2>
+    <h3 class="Test-it">Should force word breaks on small screens</h3>
+    <div class="Test-run">
+        <p>wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww</p>
+    </div>
+
     <!-- Elements -->
 
     <h2 class="Test-describe"><code>table</code></h2>
@@ -293,7 +350,7 @@
         <input type="text" size="10" style="border: 1px solid #ccc" disabled />
     </div>
 
-    <h2 class="Test-describe"><code>:focus:invalid</code></h2>
+    <h2 class="Test-describe"><code>:invalid:focus</code></h2>
     <h3 class="Test-it">Should indicate than a form field element is invalid</h3>
     <div class="Test-run">
         <label>Email:</label> <input type="email" size="10" style="border: 1px solid #ccc" />

@@ -523,6 +523,88 @@ body {
 }
 
 /* ------------------------------------------------------------------ *\
+    Typography
+\* ------------------------------------------------------------------ */
+
+/**
+ * Bold headings and optimize legibility
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+}
+
+/**
+ * Set relative font sizes for each heading level
+ */
+
+h1 {
+    font-size: 2.6em;
+}
+
+h2 {
+    font-size: 2.2em;
+}
+
+h3 {
+    font-size: 1.8em;
+}
+
+h4 {
+    font-size: 1.6em;
+}
+
+h5 {
+    font-size: 1.4em;
+}
+
+h6 {
+    font-size: 1.2em;
+}
+
+/**
+ * Restore the margin between paragraphs
+ */
+
+p + * {
+    margin-top: 1em;
+}
+
+/**
+ * Hide empty paragraphs
+ */
+
+p:empty {
+    display: none;
+}
+
+/**
+ * Force word breaks on small screens
+ */
+
+@media (max-width: 767px) {
+    /**
+     * 1. Ensure the text will wrap without breaking out of
+     *    its container
+     * 2. Add hyphens where a word breaks
+     */
+
+    body {
+        word-wrap: break-word; /* [1] */
+        word-wrap: break-word; /* [1] */
+        -webkit-hyphens: auto;
+            -ms-hyphens: auto;
+                hyphens: auto; /* [2] */
+    }
+}
+
+/* ------------------------------------------------------------------ *\
     ELements
 \* ------------------------------------------------------------------ */
 
@@ -660,7 +742,7 @@ textarea {
  * Indicate on focus that a field is invalid
  */
 
-:focus:invalid {
+:invalid:focus {
     outline-color: #f44336;
 }
 
