@@ -289,6 +289,15 @@ select[size] {
 }
 
 /*
+ * Reset font color of selected option value to body font
+ * color (IE 11+)
+ */
+
+select::-ms-value {
+    color: currentColor;
+}
+
+/*
  * Ensure labels align vertically to their respective form element
  * in a visually appealing manner
  */
