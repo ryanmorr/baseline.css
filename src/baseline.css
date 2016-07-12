@@ -350,6 +350,7 @@ textarea[readonly] {
     border-color: rgba(0, 0, 0, 0.1); /* [2] */
     background-color: rgba(238, 238, 238, 0.8); /* [2] */
     color: rgba(0, 0, 0, 0.5); /* [2] */
+    box-shadow: none; /* [2] */
 }
 
 /*
