@@ -237,6 +237,16 @@ dfn[title] {
     cursor: help;
 }
 
+/*
+ * 1. Provide scrollbars if the content exceeds its height
+ * 2. Preserve new lines, spaces, and tabs but force text wrapping
+ */
+
+pre {
+    overflow: auto; /* [1] */
+    white-space: pre-wrap;  /* [2] */
+}
+
 /* ------------------------------------------------------------------ *\
     Forms
 \* ------------------------------------------------------------------ */
