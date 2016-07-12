@@ -403,13 +403,23 @@
     </div>
 
     <h2 class="Test-describe"><code>:disabled</code></h2>
-    <h3 class="Test-it">Should indicate than a form field element is disabled</h3>
+    <h3 class="Test-it">Should indicate than a form field element is disabled via transparency and cursor</h3>
+    <div class="Test-run">
+        <input type="text" size="10" style="border: 1px solid #ccc" disabled />
+    </div>
+
+    <h3 class="Test-it">Should prevent resizing</h3>
+    <div class="Test-run">
+        <textarea style="border: 1px solid #ccc; height: 50px;" disabled></textarea>
+    </div>
+
+    <h3 class="Test-it">Should remove the focus outline</h3>
     <div class="Test-run">
         <input type="text" size="10" style="border: 1px solid #ccc" disabled />
     </div>
 
     <h2 class="Test-describe"><code>:invalid:focus</code></h2>
-    <h3 class="Test-it">Should indicate than a form field element is invalid</h3>
+    <h3 class="Test-it">Should indicate than a form field element is invalid via outline color</h3>
     <div class="Test-run">
         <label>Email:</label> <input type="email" size="10" style="border: 1px solid #ccc" />
     </div>
@@ -483,9 +493,19 @@
         <code>[aria-disabled]:not(:disabled)</code>, 
         <code>[disabled]:not(:disabled)</code>
     </h2>
-    <h3 class="Test-it">Should indicate than a non-form element is disabled and prevent user interaction</h3>
+    <h3 class="Test-it">Should indicate than a non-form element is disabled via transparency and cursor</h3>
     <div class="Test-run">
         <a href="#void-disabled" aria-disabled>disabled</a>
+    </div>
+
+    <h3 class="Test-it">Should prevent user interaction</h3>
+    <div class="Test-run">
+        <a href="#void-disabled2" onclick="console.log('foo');" aria-disabled>disabled2</a>
+    </div>
+
+    <h3 class="Test-it">Should remove the focus outline</h3>
+    <div class="Test-run">
+        <a href="#void-disabled3" aria-disabled>disabled3</a>
     </div>
 
     <h2 class="Test-describe"><code>::selection</code></h2>
