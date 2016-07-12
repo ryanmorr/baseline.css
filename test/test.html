@@ -310,7 +310,7 @@
     </div>
 
     <h2 class="Test-describe"><code>select::-ms-value</code></h2>
-    <h3 class="Test-it">Should reset font color of selected option value to body font color (IE 11+)</h3>
+    <h3 class="Test-it">Should reset the font color of the selected option value to the body font color (IE 11+)</h3>
     <div class="Test-run">
         <select style="border: 1px solid #ccc">
             <option>foo</option>
@@ -352,6 +352,26 @@
     <div class="Test-run">
         <label>Label</label>
         <textarea style="border: 1px solid #ccc; height: 50px;"></textarea>
+    </div>
+
+    <h2 class="Test-describe">
+        <code>input[readonly]</code>, 
+        <code>textarea[readonly]</code>
+    </h2>
+    <h3 class="Test-it">Should grey out a readonly field and display default cursor</h3>
+    <div class="Test-run">
+        <input type="text" value="foo" style="border: 1px solid #ccc;" readonly />
+    </div>
+
+    <h2 class="Test-describe">
+        <code>input[readonly]:focus</code>, 
+        <code>textarea[readonly]:focus</code>, 
+        <code>input[readonly]:active</code>, 
+        <code>textarea[readonly]:active</code>
+    </h2>
+    <h3 class="Test-it">Should remove the focus outline for readonly inputs and textareas</h3>
+    <div class="Test-run">
+        <textarea style="border: 1px solid #ccc;" readonly></textarea>
     </div>
 
     <h2 class="Test-describe"><code>:disabled</code></h2>
