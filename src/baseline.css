@@ -22,15 +22,31 @@
  */
 
 :root {
+    /* Typography */
     --font-color: #333;
     --font-size: 1.4em;
     --font-family: sans-serif;
     --line-height: 1.5;
+
+    /* Page */
     --page-min-width: 300px;
+
+    /* Links */
     --link-color: #337ab7;
     --link-text-decoration: none;
     --link-hover-color: #095f8a;
     --link-hover-text-decoration: underline;
+
+    /* Forms */
+    --readonly-border-color: rgba(0, 0, 0, 0.1);
+    --readonly-background-color: rgba(238, 238, 238, 0.8);
+    --readonly-font-color: rgba(0, 0, 0, 0.5);
+    --disabled-opacity: 0.7;
+    --invalid-outline-color: #f44336;
+
+    /* Selection */
+    --selection-background-color: #b3d4fc;
+    --selection-font-color: #000;
 }
 
 /* ------------------------------------------------------------------ *\
@@ -427,9 +443,9 @@ textarea {
 input[readonly],
 textarea[readonly] {
     cursor: default; /* [1] */
-    border-color: rgba(0, 0, 0, 0.1); /* [2] */
-    background-color: rgba(238, 238, 238, 0.8); /* [2] */
-    color: rgba(0, 0, 0, 0.5); /* [2] */
+    border-color: var(--readonly-border-color); /* [2] */
+    background-color: var(--readonly-background-color); /* [2] */
+    color: var(--readonly-font-color); /* [2] */
     box-shadow: none; /* [2] */
 }
 
@@ -451,7 +467,7 @@ textarea[readonly]:active {
  */
 
 :disabled {
-    opacity: 0.7; /* [1] */
+    opacity: var(--disabled-opacity); /* [1] */
     cursor: not-allowed; /* [1] */
     resize: none; /* [2] */
     outline-width: 0; /* [3] */
@@ -462,7 +478,7 @@ textarea[readonly]:active {
  */
 
 :invalid:focus {
-    outline-color: #f44336;
+    outline-color: var(--invalid-outline-color);
 }
 
 /* ------------------------------------------------------------------ *\
@@ -553,7 +569,7 @@ textarea,
 [aria-disabled]:not(:disabled),
 [disabled]:not(:disabled) {
     cursor: default; /* [1] */
-    opacity: 0.7; /* [1] */
+    opacity: var(--disabled-opacity); /* [1] */
     pointer-events: none; /* [2] */
     outline-width: 0; /* [3] */
 }
@@ -563,8 +579,8 @@ textarea,
  */
 
 ::selection {
-    background-color: #b3d4fc;
-    color: #000;
+    background-color: var(--selection-background-color);
+    color: var(--selection-font-color);
     text-shadow: none;
 }
 
