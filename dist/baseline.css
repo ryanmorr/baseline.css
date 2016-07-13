@@ -523,6 +523,50 @@ body {
 }
 
 /* ------------------------------------------------------------------ *\
+    Links
+\* ------------------------------------------------------------------ */
+
+/**
+ * 1. Set default font color and text decoration for the entire
+ *    project based on the default variables
+ * 2. Transition links when a property changes
+ */
+
+a {
+    color: #337ab7; /* [1] */
+    text-decoration: none; /* [1] */
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; /* [2] */
+}
+
+/**
+ * Add hover/focus color based on variable
+ */
+
+a:hover,
+a:focus {
+    color: #095f8a;
+}
+
+/**
+ * Add hover text decoration based on variable
+ */
+
+a:hover {
+    text-decoration: underline;
+}
+
+/**
+ * Add focus outline
+ */
+
+a:focus {
+    outline: thin dotted;
+    outline: 1px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+/* ------------------------------------------------------------------ *\
     Typography
 \* ------------------------------------------------------------------ */
 
