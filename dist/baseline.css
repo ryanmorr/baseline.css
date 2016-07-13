@@ -609,6 +609,29 @@ p:empty {
 \* ------------------------------------------------------------------ */
 
 /**
+ * Center the main content
+ */
+
+main {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/**
+ * Add clearfic to main
+ */
+
+main::before,
+main::after {
+    content: " ";
+    display: table;
+}
+
+main::after {
+    clear: both;
+}
+
+/**
  * Remove border separation and spacing
  */
 
