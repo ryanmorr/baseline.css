@@ -1,5 +1,7 @@
 # baseline.css
 
+[![GitHub version](https://badge.fury.io/gh/ryanmorr%2Fbaseline.css.svg)](https://badge.fury.io/gh/ryanmorr%2Fbaseline.css) [![Build Status](https://travis-ci.org/ryanmorr/baseline.css.svg?branch=master)](https://travis-ci.org/ryanmorr/baseline.css) ![Size](https://badge-size.herokuapp.com/ryanmorr/baseline.css/master/dist/baseline.min.css.svg?color=blue&label=file%20size)
+
 > Opinionated baseline stylesheet.
 
 Baseline is a modern CSS reset, combining the fantastic [normalize.css](https://github.com/necolas/normalize.css) with a set of opinionated base styles to provide a consistent foundation in which to build on top of. Baseline does not assume the theme of your application and therefore provides very little in the way of aesthetics (colors, borders, margins, paddings, etc.). Many of the opinionated styles, such as typography, can be configured via CSS variables that are compiled by PostCSS.
