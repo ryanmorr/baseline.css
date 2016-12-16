@@ -1,7 +1,7 @@
 {
   "name": "baseline.css",
   "description": "Opinionated baseline stylesheet",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "Unlicense",
   "homepage": "https://github.com/ryanmorr/baseline.css",
   "main": "dist/baseline.css",
@@ -24,7 +24,7 @@
     "build": "npm run compile && npm run minify"
   },
   "dependencies": {
-    "normalize.css": "^4.2.0"
+    "normalize.css": "^5.0.0"
   },
   "devDependencies": {
     "postcss": "^5.0.21",
