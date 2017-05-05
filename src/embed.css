@@ -1,0 +1,50 @@
+/* ------------------------------------------------------------------ *\
+    Embedded Content
+\* ------------------------------------------------------------------ */
+
+/*
+ * Remove the default white space at the bottom of the element
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/**
+ * Responsive media elements that maintain their aspect ratios
+ */
+
+audio,
+embed,
+img,
+object,
+video {
+    max-width: 100%;
+}
+
+embed,
+img,
+object,
+video {
+    height: auto;
+}
+
+embed,
+object {
+    height: 100%;
+}
+
+/**
+ * if `width` and/or `height` attributes are preset, disable the
+ * image's responsive behavior
+ */
+
+img[width],
+img[height] {
+    max-width: none;
+}

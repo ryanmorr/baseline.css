@@ -1,0 +1,35 @@
+/* ------------------------------------------------------------------ *\
+    Accessibility
+\* ------------------------------------------------------------------ */
+
+/**
+ * Indicate that an element is loading
+ */
+
+[aria-busy="true"] {
+    cursor: progress;
+}
+
+/*
+ * Indicate that an element is actionable
+ */
+
+[aria-controls],
+[role="button"] {
+    cursor: pointer;
+}
+
+/*
+ * Allow hidden elements to be accessible when focused
+ * Source: https://github.com/10up/sanitize.css
+ */
+
+[hidden][aria-hidden="false"] {
+    clip: rect(0, 0, 0, 0);
+    display: inherit;
+    position: absolute;
+}
+
+[hidden][aria-hidden="false"]:focus {
+    clip: auto;
+}

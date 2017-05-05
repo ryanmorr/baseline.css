@@ -1,0 +1,147 @@
+/* ------------------------------------------------------------------ *\
+    Forms
+\* ------------------------------------------------------------------ */
+
+/**
+ * Remove the default styling in all browsers
+ */
+
+button,
+input,
+select,
+textarea {
+    background-color: transparent;
+    border-style: none;
+    color: inherit;
+    font-size: 1em;
+}
+
+/*
+ * Apply visual indication that a form element is actionable
+ */
+
+button,
+label,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="file"],
+input[type="image"] {
+    cursor: pointer;
+}
+
+/*
+ * Prevent button text from being selectable
+ */
+
+button {
+    user-select: none;
+}
+
+/**
+ * Restore button focus outline in Firefox/IE due to
+ * transparent background reset
+ */
+
+button:focus {
+    outline: 1px dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+/*
+ * Allow only vertical resizing of textareas
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/*
+ * 1. Ensure the height of multiple select elements is not fixed
+ * 2. Prevent scrollbars from appearing by default
+ */
+
+select[multiple],
+select[size] {
+    height: auto; /* [1] */
+    overflow: auto; /* [2] */
+}
+
+/*
+ * Reset the font color of the selected option value to the body
+ * font color (IE 11+)
+ */
+
+select::-ms-value {
+    color: currentColor;
+}
+
+/*
+ * Ensure labels align vertically to their respective form element
+ * in a visually appealing manner
+ */
+
+input,
+select {
+    vertical-align: middle;
+}
+
+input[type="radio"] {
+    vertical-align: text-bottom;
+}
+
+input[type="checkbox"] {
+    vertical-align: bottom;
+}
+
+select[multiple],
+select[size],
+textarea {
+    vertical-align: top;
+}
+
+/*
+ * 1. Set a default cursor to indicate the field is not writable
+ * 2. Grey out the field
+ */
+
+input[readonly],
+textarea[readonly] {
+    cursor: default; /* [1] */
+    border-color: var(--readonly-border-color); /* [2] */
+    background-color: var(--readonly-background-color); /* [2] */
+    color: var(--readonly-font-color); /* [2] */
+    box-shadow: none; /* [2] */
+}
+
+/*
+ * Remove the focus outline for readonly inputs and textareas
+ */
+
+input[readonly]:focus,
+textarea[readonly]:focus,
+input[readonly]:active,
+textarea[readonly]:active {
+    outline-width: 0;
+}
+
+/*
+ * 1. Indicate that the field is inoperable
+ * 2. Prevent resizing
+ * 3. Remove focus outline
+ */
+
+:disabled {
+    opacity: var(--disabled-opacity); /* [1] */
+    cursor: not-allowed; /* [1] */
+    resize: none; /* [2] */
+    outline-width: 0; /* [3] */
+}
+
+/*
+ * Indicate on focus that a field is invalid
+ */
+
+:invalid:focus {
+    outline-color: var(--invalid-outline-color);
+}
