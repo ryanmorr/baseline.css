@@ -24,12 +24,8 @@
  * Source: https://github.com/10up/sanitize.css
  */
 
-[hidden][aria-hidden="false"] {
+[aria-hidden="false"][hidden]:not(:focus) {
     clip: rect(0, 0, 0, 0);
     display: inherit;
     position: absolute;
-}
-
-[hidden][aria-hidden="false"]:focus {
-    clip: auto;
 }

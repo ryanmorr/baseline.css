@@ -469,12 +469,6 @@
         <label>Email:</label> <input type="email" size="10" style="border: 1px solid #ccc" />
     </div>
 
-    <h2 class="Test-describe"><code>input[type="search"]</code></h2>
-    <h3 class="Test-it">Should render a search input like a normal text field in WebKit</h3>
-    <div class="Test-run">
-        <input type="search" size="10" style="border: 1px solid #ccc" />
-    </div>
-
     <!-- Embedded Content -->
 
     <h2 class="Test-describe">
@@ -582,7 +576,7 @@
         <div role="button">Button</div>
     </div>
 
-    <h2 class="Test-describe"><code>[hidden][aria-hidden="false"]</code></h2>
+    <h2 class="Test-describe"><code>[aria-hidden="false"][hidden]:not(:focus)</code></h2>
     <h3 class="Test-it">Should allow hidden elements to be accessible when focused</h3>
     <div class="Test-run highlight">
         <a href="#void4" aria-hidden="false" hidden>link</a>
