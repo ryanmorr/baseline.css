@@ -29,18 +29,6 @@ html {
 }
 
 /**
- * Set the default typography for the entire project based on
- * the default variables
- */
-
-body {
-    color: var(--font-color);
-    font-size: var(--font-size);
-    font-family: var(--font-family);
-    line-height: var(--line-height);
-}
-
-/**
  * Ensure the page always fills at least the entire height of
  * the viewport
  */
