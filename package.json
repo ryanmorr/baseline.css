@@ -24,7 +24,7 @@
     "build": "npm run compile && npm run minify"
   },
   "dependencies": {
-    "normalize.css": "^5.0.0"
+    "normalize.css": "^7.0.0"
   },
   "devDependencies": {
     "postcss": "^5.0.21",
