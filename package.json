@@ -18,8 +18,8 @@
     "url": "https://github.com/ryanmorr/baseline.css/issues"
   },
   "scripts": {
-    "test": "stylelint src/baseline.css",
-    "compile": "postcss --use postcss-import --use postcss-cssnext -o dist/baseline.css src/baseline.css",
+    "test": "stylelint src/index.css",
+    "compile": "postcss --use postcss-import --use postcss-cssnext -o dist/baseline.css src/index.css",
     "minify": "postcss --use postcss-clean -o dist/baseline.min.css dist/baseline.css",
     "build": "npm run compile && npm run minify"
   },
