@@ -1,6 +1,10 @@
 # baseline.css
 
-[![GitHub version](https://badge.fury.io/gh/ryanmorr%2Fbaseline.css.svg)](https://badge.fury.io/gh/ryanmorr%2Fbaseline.css) [![Build Status](https://travis-ci.org/ryanmorr/baseline.css.svg?branch=master)](https://travis-ci.org/ryanmorr/baseline.css) ![Size](https://badge-size.herokuapp.com/ryanmorr/baseline.css/master/dist/baseline.min.css.svg?color=blue&label=file%20size)
+[![Version Badge][version-image]][project-url]
+[![Build Status][build-image]][build-url]
+[![Dependencies][dependencies-image]][project-url]
+[![License][license-image]][license-url]
+[![File Size][file-size-image]][project-url]
 
 > Opinionated baseline stylesheet.
 
@@ -34,3 +38,12 @@ bower install ryanmorr/baseline.css
 ## License
 
 This project is dedicated to the public domain as described by the [Unlicense](http://unlicense.org/).
+
+[project-url]: https://github.com/ryanmorr/baseline.css
+[version-image]: https://badge.fury.io/gh/ryanmorr%2Fbaseline.css.svg
+[build-url]: https://travis-ci.org/ryanmorr/baseline.css
+[build-image]: https://travis-ci.org/ryanmorr/baseline.css.svg
+[dependencies-image]: https://david-dm.org/ryanmorr/baseline.css.svg
+[license-image]: https://img.shields.io/badge/license-Unlicense-blue.svg
+[license-url]: UNLICENSE
+[file-size-image]: https://badge-size.herokuapp.com/ryanmorr/baseline.css/master/dist/baseline.min.css.svg?color=blue&label=file%20size
