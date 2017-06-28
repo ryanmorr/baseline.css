@@ -139,9 +139,10 @@ textarea[readonly]:active {
 }
 
 /*
- * Indicate on focus that a field is invalid
+ * Indicate that a field is invalid when it is not currently
+ * being edited
  */
 
-:invalid:focus {
+:not(:focus):invalid {
     outline-color: var(--invalid-outline-color);
 }

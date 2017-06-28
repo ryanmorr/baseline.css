@@ -1,4 +1,4 @@
-/*! baseline.css v0.1.1 | https://github.com/ryanmorr/baseline.css */
+/*! baseline.css v0.2.0 | https://github.com/ryanmorr/baseline.css */
 
 /**
  * Define the character encoding for the stylesheet
@@ -10,23 +10,21 @@
  * Build on top of `normalize.css` for a consistent base layer
  */
 
-/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
-
-/**
- * 1. Change the default font family in all browsers (opinionated).
- * 2. Correct the line height in all browsers.
- * 3. Prevent adjustments of font size after orientation changes in
- *    IE on Windows Phone and in iOS.
- */
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
    ========================================================================== */
 
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+
 html {
-  font-family: sans-serif; /* 1 */
-  line-height: 1.15; /* 2 */
-  -ms-text-size-adjust: 100%; /* 3 */
-  -webkit-text-size-adjust: 100%; /* 3 */
+  line-height: 1.15; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /* Sections
@@ -120,17 +118,7 @@ a {
 }
 
 /**
- * Remove the outline on focused links when they are also active or hovered
- * in all browsers (opinionated).
- */
-
-a:active,
-a:hover {
-  outline-width: 0;
-}
-
-/**
- * 1. Remove the bottom border in Firefox 39-.
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
  */
 
@@ -329,13 +317,11 @@ button:-moz-focusring,
 }
 
 /**
- * Change the border, margin, and padding in all browsers (opinionated).
+ * Correct the padding in Firefox.
  */
 
 fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
+  padding: 0.35em 0.75em 0.625em;
 }
 
 /**
@@ -472,6 +458,10 @@ template {
   display: none;
 }
 
+/**
+ * Load baseline modules
+ */
+
 /* ------------------------------------------------------------------ *\
     Variables
 \* ------------------------------------------------------------------ */
@@ -524,18 +514,6 @@ html {
 }
 
 /**
- * Set the default typography for the entire project based on
- * the default variables
- */
-
-body {
-    color: #333;
-    font-size: 1.4em;
-    font-family: sans-serif;
-    line-height: 1.5;
-}
-
-/**
  * Ensure the page always fills at least the entire height of
  * the viewport
  */
@@ -574,52 +552,20 @@ body {
 }
 
 /* ------------------------------------------------------------------ *\
-    Links
-\* ------------------------------------------------------------------ */
-
-/**
- * 1. Set default font color and text decoration for the entire
- *    project based on the default variables
- * 2. Transition links when a property changes
- */
-
-a {
-    color: #337ab7; /* [1] */
-    text-decoration: none; /* [1] */
-    -webkit-transition: all 0.3s;
-    transition: all 0.3s; /* [2] */
-}
-
-/**
- * Add hover/focus color based on variable
- */
-
-a:hover,
-a:focus {
-    color: #095f8a;
-}
-
-/**
- * Add hover text decoration based on variable
- */
-
-a:hover {
-    text-decoration: underline;
-}
-
-/**
- * Add focus outline
- */
-
-a:focus {
-    outline: thin dotted;
-    outline: 1px auto -webkit-focus-ring-color;
-    outline-offset: -2px;
-}
-
-/* ------------------------------------------------------------------ *\
     Typography
 \* ------------------------------------------------------------------ */
+
+/**
+ * Set the default typography for the entire project based on
+ * the default variables
+ */
+
+body {
+    color: #333;
+    font-size: 1.4em;
+    font-family: sans-serif;
+    line-height: 1.5;
+}
 
 /**
  * Bold headings and optimize legibility
@@ -661,6 +607,46 @@ h5 {
 
 h6 {
     font-size: 1.2em;
+}
+
+/**
+ * 1. Set default font color and text decoration for the entire
+ *    project based on the default variables
+ * 2. Transition links when a property changes
+ */
+
+a {
+    color: #337ab7; /* [1] */
+    text-decoration: none; /* [1] */
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s; /* [2] */
+}
+
+/**
+ * Add hover/focus color based on variable
+ */
+
+a:hover,
+a:focus {
+    color: #095f8a;
+}
+
+/**
+ * Add hover text decoration based on variable
+ */
+
+a:hover {
+    text-decoration: underline;
+}
+
+/**
+ * Add focus outline
+ */
+
+a:focus {
+    outline: thin dotted;
+    outline: 1px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
 }
 
 /**
@@ -924,10 +910,11 @@ textarea[readonly]:active {
 }
 
 /*
- * Indicate on focus that a field is invalid
+ * Indicate that a field is invalid when it is not currently
+ * being edited
  */
 
-:invalid:focus {
+:not(:focus):invalid {
     outline-color: #f44336;
 }
 
@@ -1067,14 +1054,10 @@ textarea,
  * Source: https://github.com/10up/sanitize.css
  */
 
-[hidden][aria-hidden="false"] {
+[aria-hidden="false"][hidden]:not(:focus) {
     clip: rect(0, 0, 0, 0);
     display: inherit;
     position: absolute;
-}
-
-[hidden][aria-hidden="false"]:focus {
-    clip: auto;
 }
 
 /* ------------------------------------------------------------------ *\
