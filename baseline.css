@@ -1,6 +1,6 @@
-/* ------------------------------------------------------------------ *\
+/* --------------------------------------------------------------------------- *\
     Document
-\* ------------------------------------------------------------------ */
+\* --------------------------------------------------------------------------- */
 
 /**
  * 1. Add the default cursor in all browsers (opinionated).
@@ -43,4 +43,37 @@
     background: transparent; /* 1 */
     background-repeat: no-repeat; /* 2 */
     box-sizing: inherit; /* 3 */
+}
+
+/* --------------------------------------------------------------------------- *\
+    Typography
+\* --------------------------------------------------------------------------- */
+
+/**
+ * Set font sizes for each heading level and switch to using rem units
+ * to remove nested-shrinking sizes (opinionated).
+ */
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.17rem;
+}
+
+h4 {
+    font-size: 1rem;
+}
+
+h5 {
+    font-size: 0.83rem;
+}
+
+h6 {
+    font-size: 0.67rem;
 }
