@@ -360,8 +360,7 @@ textarea {
 \* ------------------------------------------------------------------ */
 
 /*
- * 1. Make media elements responsive that maintain their aspect ratios (opinionated).
- * 2. Remove the default white space at the bottom of the element (opinionated).
+ * Remove the default white space at the bottom of the element (opinionated).
  */
 
 img,
@@ -370,9 +369,20 @@ canvas,
 iframe,
 svg,
 video {
-    max-width: 100%; /* 1 */
-    height: auto; /* 1 */
-    vertical-align: middle; /* 2 */
+    vertical-align: middle;
+}
+
+/*
+ * Make media elements responsive and maintain their aspect ratios (opinionated).
+ */
+
+img,
+canvas,
+iframe,
+svg,
+video {
+    max-width: 100%;
+    height: auto;
 }
 
 /**
