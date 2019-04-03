@@ -77,3 +77,108 @@ h5 {
 h6 {
     font-size: 0.67rem;
 }
+
+/* --------------------------------------------------------------------------- *\
+    General Elements
+\* --------------------------------------------------------------------------- */
+
+/**
+ * Remove the outline when hovering in all browsers (opinionated).
+ */
+
+a:active,
+a:hover {
+    outline-width: 0;
+}
+
+/**
+ * Add the correct height in Firefox.
+ */
+
+hr {
+    height: 0;
+}
+
+/**
+ * Remove the list style on unordered lists (opinionated).
+ */
+
+ul {
+    list-style: none;
+}
+
+/**
+ * Add the correct text decoration in Chrome, Edge, and Safari.
+ */
+
+abbr[title] {
+    text-decoration: underline dotted;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+
+small {
+    font-size: 80%;
+}
+
+/**
+ * 1. Use the default monospace user interface font in all
+ *    browsers (opinionated).
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+
+code,
+kbd,
+samp,
+pre {
+    font-family: Menlo, Consolas, Roboto Mono, Ubuntu Monospace, Noto Mono, Oxygen Mono, Liberation Mono, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+}
+
+/**
+ * Collapse border spacing in all browsers (opinionated).
+ */
+
+table {
+    border-collapse: collapse;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line
+ * height in all browsers.
+ */
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+/**
+ * Add italics not present in Safari and Chrome.
+ */
+
+dfn {
+    font-style: italic;
+}
