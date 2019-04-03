@@ -155,11 +155,26 @@ pre {
 }
 
 /**
- * Collapse border spacing in all browsers (opinionated).
+ * 1. Make tables fill the entire width of their containers (opinionated).
+ * 2. Collapse border spacing in all browsers (opinionated).
+ * 3. Prevent coloumn overflow (opinionated).
  */
 
 table {
-    border-collapse: collapse;
+    width: 100%; /* 1 */
+    border-collapse: collapse; /* 2 */
+    table-layout: fixed; /* 3 */
+}
+
+/**
+ * 1. Make column text align left by default (opinionated).
+ * 2. Make font weight normal by default (opinionated).
+ */
+
+td,
+th {
+  text-align: left; /* 1 */
+  font-weight: normal; /* 2 */
 }
 
 /**
