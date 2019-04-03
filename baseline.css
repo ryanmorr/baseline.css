@@ -459,3 +459,40 @@ dialog {
 dialog:not([open]) {
     display: none;
 }
+
+/* ------------------------------------------------------------------ *\
+    User Interaction
+\* ------------------------------------------------------------------ */
+
+/*
+ * Remove the tapping delay on clickable elements in all browsers (opinionated).
+ */
+
+a,
+area,
+button,
+input,
+label,
+select,
+summary,
+textarea,
+[tabindex] {
+    touch-action: manipulation;
+}
+
+/*
+ * 1. Restore the coloring undone by defining the text shadow in all browsers (opinionated).
+ * 2. Remove the text shadow on text selections in Firefox 61- (opinionated).
+ */
+
+::-moz-selection {
+    background-color: #b3d4fc; /* 1 */
+    color: #000; /* 1 */
+    text-shadow: none;  /* 2 */
+}
+
+::selection {
+    background-color: #b3d4fc; /* 1 */
+    color: #000; /* 1 */
+    text-shadow: none;  /* 2 */
+}
