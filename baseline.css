@@ -173,8 +173,8 @@ table {
 
 td,
 th {
-  text-align: left; /* 1 */
-  font-weight: normal; /* 2 */
+    text-align: left; /* 1 */
+    font-weight: normal; /* 2 */
 }
 
 /**
