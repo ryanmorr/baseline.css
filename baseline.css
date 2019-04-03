@@ -496,3 +496,47 @@ textarea,
     color: #000; /* 1 */
     text-shadow: none;  /* 2 */
 }
+
+/* ------------------------------------------------------------------ *\
+    Accessibility
+\* ------------------------------------------------------------------ */
+
+/**
+ * Change the cursor on busy elements in all browsers (opinionated).
+ */
+
+[aria-busy="true"] {
+    cursor: progress;
+}
+
+/*
+ * Change the cursor on control elements in all browsers (opinionated).
+ */
+
+[aria-controls],
+[role="button"] {
+    cursor: pointer;
+}
+
+/*
+ * 1. Change the cursor on disabled, not-editable, or otherwise
+ *    inoperable elements in all browsers (opinionated).
+ * 2. Prevent user interaction (opinionated).
+ */
+
+[aria-disabled="true"],
+[disabled] {
+    cursor: not-allowed; /* 1 */
+    pointer-events: none;  /* 2 */
+}
+
+/*
+ * Change the display on visually hidden accessible elements
+ * in all browsers (opinionated).
+ */
+
+[aria-hidden="false"][hidden]:not(:focus) {
+    clip: rect(0, 0, 0, 0);
+    display: inherit;
+    position: absolute;
+}
