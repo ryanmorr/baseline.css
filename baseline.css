@@ -146,6 +146,14 @@ pre {
     font-size: 1em; /* 2 */
 }
 
+/*
+ * Preserve new lines, spaces, and tabs but force text wrapping (opinionated).
+ */
+
+pre {
+    white-space: pre-wrap;
+}
+
 /**
  * Collapse border spacing in all browsers (opinionated).
  */
