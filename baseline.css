@@ -284,16 +284,6 @@ legend {
     white-space: normal;
 }
 
-/**
- * 1. Add the correct display in Edge.
- * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-
-progress {
-    display: inline-block; /* 1 */
-    vertical-align: baseline; /* 2 */
-}
-
 /*
  * Allow only vertical resizing of all textareas (opinionated).
  */
@@ -363,4 +353,69 @@ textarea {
 ::-webkit-input-placeholder {
     color: inherit;
     opacity: 0.54;
+}
+
+/* ------------------------------------------------------------------ *\
+    Media
+\* ------------------------------------------------------------------ */
+
+/*
+ * 1. Make media elements responsive that maintain their aspect ratios (opinionated).
+ * 2. Remove the default white space at the bottom of the element (opinionated).
+ */
+
+img,
+audio,
+canvas,
+iframe,
+svg,
+video {
+    max-width: 100%; /* 1 */
+    height: auto; /* 1 */
+    vertical-align: middle; /* 2 */
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/*
+ * Offset `alt` text from surrounding copy (opinionated).
+ */
+
+img {
+    font-style: italic;
+}
+
+/**
+ * If `width` and/or `height` attributes are preset, disable the
+ * image's responsive behavior (opinionated).
+ */
+
+img[width],
+img[height] {
+    max-width: none;
+}
+
+/**
+ * 1. Add the correct display in Edge.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+
+progress {
+    display: inline-block; /* 1 */
+    vertical-align: baseline; /* 2 */
+}
+
+/**
+ * Change the fill color to match the text color in all browsers (opinionated).
+ */
+
+svg:not([fill]) {
+    fill: currentColor;
 }
