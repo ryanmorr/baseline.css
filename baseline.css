@@ -234,6 +234,16 @@ optgroup {
 }
 
 /**
+ * Style select elements like a standard input (opinionated).
+ */
+
+select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+/**
  * Remove the inheritance of text transform in Edge and Firefox.
  * 1. Remove the inheritance of text transform in Firefox.
  */
