@@ -551,6 +551,23 @@ textarea,
 }
 
 /*
+ * Change the cursor on draggable elements in all browsers (opinionated).
+ */
+
+[aria-grabbed="false"] {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    cursor: grab;
+}
+
+[aria-grabbed="true"] {
+    cursor: -webkit-grabbing;
+    cursor: -moz-grabbing;
+    cursor: grabbing;
+}
+
+/*
  * Change the display on visually hidden accessible elements
  * in all browsers (opinionated).
  */
