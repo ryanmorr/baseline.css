@@ -20,9 +20,6 @@
   "scripts": {
     "test": "stylelint baseline.css"
   },
-  "dependencies": {
-    "normalize.css": "^8.0.1"
-  },
   "devDependencies": {
     "stylelint": "^9.10.1",
     "stylelint-config-standard": "^18.2.0"
