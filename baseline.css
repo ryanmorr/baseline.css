@@ -4,11 +4,10 @@
 
 /**
  * 1. Add the default cursor in all browsers (opinionated).
- * 2. Ensure a base font size of 16 pixels.
+ * 2. Use the default user interface font in all browsers (opinionated).
  * 3. Correct the line height in all browsers.
  * 4. Use a 4-space tab width in all browsers (opinionated).
- * 5. Prevent adjustments of font size after orientation changes in
- *    IE on Windows Phone and in iOS.
+ * 5. Prevent adjustments of font size after orientation changes in iOS.
  * 6. Globally remove the tap highlight color in iOS and Android (opinionated).
  * 7. Use a better box model (opinionated).
  * 8. Breaks words to prevent overflow in all browsers (opinionated).
@@ -16,11 +15,21 @@
 
 :root {
     cursor: default; /* 1 */
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif; /* 2 */
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Roboto",
+        "Oxygen",
+        "Ubuntu",
+        "Cantarell",
+        "Fira Sans",
+        "Droid Sans",
+        "Helvetica Neue",
+        sans-serif; /* 2 */
     line-height: 1.15; /* 3 */
     -moz-tab-size: 4; /* 4 */
     tab-size: 4; /* 4 */
-    -ms-text-size-adjust: 100%; /* 5 */
     -webkit-text-size-adjust: 100%; /* 5 */
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* 6 */
     box-sizing: border-box; /* 7 */
@@ -57,12 +66,12 @@
 }
 
 /* --------------------------------------------------------------------------- *\
-    Typography
+    General Elements
 \* --------------------------------------------------------------------------- */
 
 /**
- * Set font sizes for each heading level and switch to using rem units
- * to remove nested-shrinking sizes (opinionated).
+ * Set font sizes for each heading level and switch to using rem units to
+ * remove nested-shrinking sizes (opinionated).
  */
 
 h1 {
@@ -88,10 +97,6 @@ h5 {
 h6 {
     font-size: 0.67rem;
 }
-
-/* --------------------------------------------------------------------------- *\
-    General Elements
-\* --------------------------------------------------------------------------- */
 
 /**
  * Remove the outline when hovering in all browsers (opinionated).
@@ -144,8 +149,7 @@ small {
 }
 
 /**
- * 1. Use the default monospace user interface font in all
- *    browsers (opinionated).
+ * 1. Use the default monospace user interface font in all browsers (opinionated).
  * 2. Correct the odd `em` font sizing in all browsers.
  */
 
@@ -153,7 +157,15 @@ code,
 kbd,
 samp,
 pre {
-    font-family: Menlo, Consolas, Roboto Mono, Ubuntu Monospace, Noto Mono, Oxygen Mono, Liberation Mono, monospace; /* 1 */
+    font-family:
+        Menlo,
+        Consolas,
+        Roboto Mono,
+        Ubuntu Monospace,
+        Noto Mono,
+        Oxygen Mono,
+        Liberation Mono,
+        monospace; /* 1 */
     font-size: 1em; /* 2 */
 }
 
@@ -189,8 +201,7 @@ th {
 }
 
 /**
- * Prevent `sub` and `sup` elements from affecting the line
- * height in all browsers.
+ * Prevent `sub` and `sup` elements from affecting the line height in all browsers.
  */
 
 sub,
@@ -278,7 +289,7 @@ button,
 }
 
 /*
- * Prevent button text from being selectable.
+ * Prevent button text from being selectable (opinionated).
  */
 
 button {
@@ -286,8 +297,7 @@ button {
 }
 
 /**
- * Restore button focus outline in Firefox/IE due to
- * transparent background reset
+ * Restore button focus outline in Firefox due to transparent background reset.
  */
 
 button:focus {
@@ -376,12 +386,13 @@ textarea {
     opacity: 0.54;
 }
 
-/* ------------------------------------------------------------------ *\
+/* --------------------------------------------------------------------------- *\
     Media
-\* ------------------------------------------------------------------ */
+\* --------------------------------------------------------------------------- */
 
 /*
- * Remove the default white space at the bottom of the element (opinionated).
+ * Remove the default white space at the bottom of the
+ * element (opinionated).
  */
 
 img,
@@ -406,15 +417,6 @@ video {
     height: auto;
 }
 
-/**
- * Add the correct display in iOS 4-7.
- */
-
-audio:not([controls]) {
-    display: none;
-    height: 0;
-}
-
 /*
  * Offset `alt` text from surrounding copy (opinionated).
  */
@@ -424,13 +426,22 @@ img {
 }
 
 /**
- * If `width` and/or `height` attributes are preset, disable the
- * image's responsive behavior (opinionated).
+ * If `width` and/or `height` attributes are preset, disable the image's
+ * responsive behavior (opinionated).
  */
 
 img[width],
 img[height] {
     max-width: none;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
 }
 
 /**
@@ -444,16 +455,17 @@ progress {
 }
 
 /**
- * Change the fill color to match the text color in all browsers (opinionated).
+ * Change the fill color to match the text color in all
+ * browsers (opinionated).
  */
 
 svg:not([fill]) {
     fill: currentColor;
 }
 
-/* ------------------------------------------------------------------ *\
+/* --------------------------------------------------------------------------- *\
     Interactive
-\* ------------------------------------------------------------------ */
+\* --------------------------------------------------------------------------- */
 
 /*
  * 1. Add the correct display in all browsers.
@@ -466,7 +478,7 @@ summary {
 }
 
 /*
- * Add the correct styles in Edge, IE, and Safari.
+ * Add the correct styles in Edge and Safari.
  */
 
 dialog {
@@ -491,9 +503,9 @@ dialog:not([open]) {
     display: none;
 }
 
-/* ------------------------------------------------------------------ *\
+/* --------------------------------------------------------------------------- *\
     User Interaction
-\* ------------------------------------------------------------------ */
+\* --------------------------------------------------------------------------- */
 
 /*
  * Remove the tapping delay on clickable elements in all browsers (opinionated).
@@ -512,7 +524,8 @@ textarea,
 }
 
 /*
- * 1. Restore the coloring undone by defining the text shadow in all browsers (opinionated).
+ * 1. Restore the coloring undone by defining the text shadow in
+ *    all browsers (opinionated).
  * 2. Remove the text shadow on text selections in Firefox 61- (opinionated).
  */
 
@@ -528,9 +541,9 @@ textarea,
     text-shadow: none;  /* 2 */
 }
 
-/* ------------------------------------------------------------------ *\
+/* --------------------------------------------------------------------------- *\
     Accessibility
-\* ------------------------------------------------------------------ */
+\* --------------------------------------------------------------------------- */
 
 /**
  * Change the cursor on busy elements in all browsers (opinionated).
@@ -550,8 +563,8 @@ textarea,
 }
 
 /*
- * 1. Change the cursor on disabled, not-editable, or otherwise
- *    inoperable elements in all browsers (opinionated).
+ * 1. Change the cursor on disabled, not-editable, or otherwise inoperable
+ *    elements in all browsers (opinionated).
  * 2. Prevent user interaction (opinionated).
  */
 
@@ -579,8 +592,8 @@ textarea,
 }
 
 /*
- * Change the display on visually hidden accessible elements
- * in all browsers (opinionated).
+ * Change the display on visually hidden accessible elements in all
+ * browsers (opinionated).
  */
 
 [aria-hidden="false"][hidden]:not(:focus) {
@@ -589,9 +602,9 @@ textarea,
     position: absolute;
 }
 
-/* ------------------------------------------------------------------ *\
+/* --------------------------------------------------------------------------- *\
     Print
-\* ------------------------------------------------------------------ */
+\* --------------------------------------------------------------------------- */
 
 /**
  * Optimize the page for printing
@@ -600,8 +613,8 @@ textarea,
 
 @media print {
     *,
-    *:before,
-    *:after {
+    *::before,
+    *::after {
         background: transparent !important;
         color: #000 !important;
         box-shadow: none !important;
@@ -613,16 +626,16 @@ textarea,
         text-decoration: underline;
     }
 
-    a[href]:after {
+    a[href]::after {
         content: " (" attr(href) ")";
     }
 
-    abbr[title]:after {
+    abbr[title]::after {
         content: " (" attr(title) ")";
     }
-   
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
+
+    a[href^="#"]::after,
+    a[href^="javascript:"]::after {
         content: "";
     }
 
@@ -635,7 +648,7 @@ textarea,
         border: 1px solid #999;
         page-break-inside: avoid;
     }
-   
+
     thead {
         display: table-header-group;
     }
