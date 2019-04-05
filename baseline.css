@@ -189,8 +189,8 @@ table {
 }
 
 /**
- * 1. Make column text align left by default (opinionated).
- * 2. Make font weight normal by default (opinionated).
+ * 1. Make column text align left (opinionated).
+ * 2. Make font weight normal (opinionated).
  */
 
 td,
@@ -387,6 +387,15 @@ textarea {
     opacity: 0.54;
 }
 
+/*
+ * Change the cursor on disabled, not-editable, or otherwise inoperable
+ * form elements in all browsers (opinionated).
+ */
+
+:disabled {
+    cursor: not-allowed;
+}
+
 /* --------------------------------------------------------------------------- *\
     Embedded Content
 \* --------------------------------------------------------------------------- */
@@ -406,7 +415,7 @@ video {
 }
 
 /*
- * Make media elements responsive and maintain their aspect ratios (opinionated).
+ * Make media elements responsive (opinionated).
  */
 
 img,
@@ -564,15 +573,13 @@ textarea,
 }
 
 /*
- * 1. Change the cursor on disabled, not-editable, or otherwise inoperable
- *    elements in all browsers (opinionated).
- * 2. Prevent user interaction (opinionated).
+ * Change the cursor on disabled, not-editable, or otherwise inoperable
+ * elements in all browsers (opinionated).
  */
 
 [aria-disabled="true"],
 [disabled] {
-    cursor: not-allowed; /* 1 */
-    pointer-events: none;  /* 2 */
+    cursor: default;
 }
 
 /*
