@@ -324,6 +324,16 @@ textarea {
     resize: vertical;
 }
 
+/*
+ * Improve label alignment for tall form fields (opinionated).
+ */
+
+select[multiple],
+select[size],
+textarea {
+    vertical-align: top;
+}
+
 /**
  * Remove the inner border and padding in Firefox.
  */
@@ -615,7 +625,7 @@ textarea,
 \* --------------------------------------------------------------------------- */
 
 /**
- * Optimize the page for printing
+ * Optimize the page for printing (opinionated).
  * Source: https://github.com/h5bp/main.css/blob/master/src/_print.css
  */
 
