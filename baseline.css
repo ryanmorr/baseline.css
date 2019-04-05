@@ -48,7 +48,6 @@
 ::before {
     margin: 0; /* 1 */
     padding: 0; /* 1 */
-    border: 0; /* 1 */
     background: transparent; /* 1 */
     background-repeat: no-repeat; /* 2 */
     box-sizing: inherit; /* 3 */
@@ -233,7 +232,8 @@ dfn {
 \* --------------------------------------------------------------------------- */
 
 /**
- * Inherit styling in all browsers (opinionated).
+ * 1. Inherit styling in all browsers (opinionated).
+ * 2. Remove the default border style in all browsers (opinionated).
  */
 
 button,
@@ -241,10 +241,11 @@ input,
 optgroup,
 select,
 textarea {
-    color: inherit;
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
+    color: inherit; /* 1 */
+    font-family: inherit; /* 1 */
+    font-size: inherit; /* 1 */
+    line-height: inherit; /* 1 */
+    border-style: none; /* 2 */
 }
 
 /**
@@ -387,7 +388,7 @@ textarea {
 }
 
 /* --------------------------------------------------------------------------- *\
-    Media
+    Embedded Content
 \* --------------------------------------------------------------------------- */
 
 /*
