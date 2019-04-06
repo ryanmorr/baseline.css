@@ -3,8 +3,8 @@
 \* --------------------------------------------------------------------------- */
 
 /**
- * 1. Add the default cursor in all browsers (opinionated).
- * 2. Use the default user interface font in all browsers (opinionated).
+ * 1. Use the default user interface font in all browsers (opinionated).
+ * 2. Add the default cursor in all browsers (opinionated).
  * 3. Correct the line height in all browsers.
  * 4. Use a 4-space tab width in all browsers (opinionated).
  * 5. Prevent adjustments of font size after orientation changes in iOS.
@@ -14,7 +14,6 @@
  */
 
 :root {
-    cursor: default; /* 1 */
     font-family:
         -apple-system,
         BlinkMacSystemFont,
@@ -26,7 +25,9 @@
         "Fira Sans",
         "Droid Sans",
         "Helvetica Neue",
-        sans-serif; /* 2 */
+        sans-serif; /* 1 */
+
+    cursor: default; /* 2 */
     line-height: 1.15; /* 3 */
     -moz-tab-size: 4; /* 4 */
     tab-size: 4; /* 4 */
@@ -165,6 +166,7 @@ pre {
         Oxygen Mono,
         Liberation Mono,
         monospace; /* 1 */
+
     font-size: 1em; /* 2 */
 }
 

@@ -30,8 +30,7 @@
     "extends": "stylelint-config-standard",
     "rules": {
       "no-descending-specificity": null,
-      "indentation": 4,
-      "declaration-empty-line-before": "never"
+      "indentation": 4
     }
   }
 }
