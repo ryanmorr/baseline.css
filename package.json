@@ -18,9 +18,11 @@
     "url": "https://github.com/ryanmorr/baseline.css/issues"
   },
   "scripts": {
+    "compile": "cssnano baseline.css baseline.min.css",
     "test": "stylelint baseline.css"
   },
   "devDependencies": {
+    "cssnano-cli": "^1.0.5",
     "stylelint": "^9.10.1",
     "stylelint-config-standard": "^18.2.0"
   },
