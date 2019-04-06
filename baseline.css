@@ -456,15 +456,6 @@ img[height] {
 }
 
 /**
- * Add the correct display in iOS 4-7.
- */
-
-audio:not([controls]) {
-    display: none;
-    height: 0;
-}
-
-/**
  * 1. Add the correct display in Edge.
  * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
@@ -544,21 +535,13 @@ textarea,
 }
 
 /*
- * 1. Restore the coloring undone by defining the text shadow in
- *    all browsers (opinionated).
- * 2. Remove the text shadow on text selections in Firefox 61- (opinionated).
+ * Specify text selection background color and omit drop shadow (opinionated).
  */
 
-::-moz-selection {
-    background-color: #b3d4fc; /* 1 */
-    color: #000; /* 1 */
-    text-shadow: none;  /* 2 */
-}
-
 ::selection {
-    background-color: #b3d4fc; /* 1 */
-    color: #000; /* 1 */
-    text-shadow: none;  /* 2 */
+    background-color: #b3d4fc;
+    color: #000;
+    text-shadow: none;
 }
 
 /* --------------------------------------------------------------------------- *\
