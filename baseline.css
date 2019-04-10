@@ -268,7 +268,6 @@ optgroup {
 select {
     -moz-appearance: none;
     -webkit-appearance: none;
-    appearance: none;
 }
 
 /**
@@ -299,6 +298,9 @@ button,
  */
 
 button {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
     user-select: none;
 }
 
