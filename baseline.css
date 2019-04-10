@@ -69,8 +69,21 @@
 }
 
 /* --------------------------------------------------------------------------- *\
-    General Elements
+    Typography
 \* --------------------------------------------------------------------------- */
+
+/**
+ * Disable subpixel anti-aliasing and default to grayscale on high DPI
+ * screens (opinionated).
+ * Source: https://github.com/sindresorhus/modern-normalize/issues/19
+ */
+
+@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) {
+    body {
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-font-smoothing: antialiased;
+    }
+}
 
 /**
  * Set font sizes for each heading level and switch to using rem units to
@@ -100,6 +113,10 @@ h5 {
 h6 {
     font-size: 0.67rem;
 }
+
+/* --------------------------------------------------------------------------- *\
+    General Elements
+\* --------------------------------------------------------------------------- */
 
 /**
  * Remove the outline when hovering in all browsers (opinionated).
