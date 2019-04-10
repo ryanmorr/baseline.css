@@ -542,6 +542,16 @@ dialog:not([open]) {
     User Interaction
 \* --------------------------------------------------------------------------- */
 
+/**
+ * Remove the focus outline on elements that should be focusable, but should
+ * not be reachable via sequential keyboard navigation for mouse/pointer based
+ * interactions (opinionated).
+ */
+
+[tabindex="-1"]:focus:not(:focus-visible) {
+    outline: 0 !important;
+}
+
 /*
  * Remove the tapping delay on clickable elements in all browsers (opinionated).
  */
