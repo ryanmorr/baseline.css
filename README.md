@@ -2,38 +2,34 @@
 
 [![Version Badge][version-image]][project-url]
 [![Build Status][build-image]][build-url]
-[![Dependencies][dependencies-image]][project-url]
 [![License][license-image]][license-url]
-[![File Size][file-size-image]][project-url]
 
-> Opinionated baseline stylesheet.
+> A modern and opinionated baseline stylesheet.
 
-Baseline is a modern CSS reset, combining the fantastic [normalize.css](https://github.com/necolas/normalize.css) with a set of opinionated base styles to provide a consistent foundation in which to build on top of. Baseline does not assume the theme of your application and therefore provides very little in the way of aesthetics (colors, borders, margins, paddings, etc.). Many of the opinionated styles, such as typography, can be configured via CSS variables that are compiled by PostCSS.
+## Install
+
+Download the [development](http://github.com/ryanmorr/baseline.css/raw/master/baseline.css) or [minified](http://github.com/ryanmorr/baseline.css/raw/master/baseline.min.css) version, or install via NPM:
+
+``` sh
+npm install @ryanmorr/baseline.css
+```
 
 ## Features
 
-* Automatically includes [normalize.css](https://github.com/necolas/normalize.css)
-* Optimized for responsive design by resetting the box model to `border-box`
-* Ensures the page always fills at least the entire height of the viewport
-* Removes the margin, padding, and border for all elements
-* Remove `-webkit-tap-highlight-color` from all applicable elements
-* Basic starting point for typography including font family, font size, font color, line height, and headings
-* All images are responsive by default
-* Wide variety of form optimizations based on best practices
-* Remove click delay on clickable elements on mobile devices
-* Accessibility helpers
-* Styles optimized for printing
-* Plus many more!
+Compiling elements of [normalize.css](https://github.com/necolas/normalize.css), [sanitize.css](https://github.com/csstools/sanitize.css), [Bootstrap](https://github.com/twbs/bootstrap), [ress](https://github.com/filipelinhares/ress), [CSS Remedy](https://github.com/mozdevs/cssremedy), and others with my own personal preferences while only supporting the latest browsers. Some of the features include:
 
-## Installation
-
-Download the [development](http://github.com/ryanmorr/baseline.css/raw/master/dist/baseline.css) or [minified](http://github.com/ryanmorr/baseline.css/raw/master/dist/baseline.min.css) version, or install it in one of the following ways:
-
-``` sh
-npm install ryanmorr/baseline.css
-
-bower install ryanmorr/baseline.css
-```
+* Most of the normalizations from normalize.css.
+* Resets the box model to `border-box`.
+* Removes the margin and padding of all elements.
+* Sets the background of all elements to transparent and prevents background repeating.
+* Render text with grayscale antialiasing on high DPI screens.
+* Headings and typography are optimized for `rem` units.
+* Images and other media elements are responsive by default.
+* Removes the default styling for buttons and select elements.
+* Removes click delay on clickable elements on mobile devices.
+* Future-proof rule to remove focus outlines for mouse/pointer based interactions.
+* Accessibility helpers.
+* Styles optimized for printing.
 
 ## License
 
@@ -43,7 +39,5 @@ This project is dedicated to the public domain as described by the [Unlicense](h
 [version-image]: https://badge.fury.io/gh/ryanmorr%2Fbaseline.css.svg
 [build-url]: https://travis-ci.org/ryanmorr/baseline.css
 [build-image]: https://travis-ci.org/ryanmorr/baseline.css.svg
-[dependencies-image]: https://david-dm.org/ryanmorr/baseline.css.svg
 [license-image]: https://img.shields.io/badge/license-Unlicense-blue.svg
 [license-url]: UNLICENSE
-[file-size-image]: https://badge-size.herokuapp.com/ryanmorr/baseline.css/master/dist/baseline.min.css.svg?color=blue&label=file%20size
