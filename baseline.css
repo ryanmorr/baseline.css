@@ -426,7 +426,10 @@ textarea {
  * form elements in all browsers (opinionated).
  */
 
-:disabled {
+button:disabled,
+input:disabled,
+select:disabled,
+textarea:disabled {
     cursor: not-allowed;
 }
 
