@@ -1,15 +1,12 @@
 {
   "name": "baseline.css",
-  "description": "Opinionated baseline stylesheet",
-  "version": "0.2.0",
+  "description": "A modern and opinionated baseline stylesheet",
+  "version": "1.0.0",
   "license": "Unlicense",
   "homepage": "https://github.com/ryanmorr/baseline.css",
-  "main": "dist/baseline.css",
-  "author": {
-    "name": "Ryan Morr",
-    "email": "rm.morr@gmail.com",
-    "url": "http://ryanmorr.com"
-  },
+  "main": "baseline.min.css",
+  "style": "baseline.min.css",
+  "author": "Ryan Morr",
   "repository": {
     "type": "git",
     "url": "git://github.com/ryanmorr/baseline.css.git"
