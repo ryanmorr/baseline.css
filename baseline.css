@@ -101,3 +101,23 @@
         transition-delay: 0s !important; /* 3 */
     }
 }
+
+/* --------------------------------------------------------------------------- *\
+    General Elements
+\* --------------------------------------------------------------------------- */
+
+/**
+ * Remove list styles for unordered lists and menus
+ */
+
+ :where(ul, menu) {
+    list-style: none;
+}
+
+/**
+ * Collapse border spacing in all browsers (opinionated).
+ */
+
+:where(table) {
+    border-collapse: collapse;
+}
