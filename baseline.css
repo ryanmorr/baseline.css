@@ -121,3 +121,28 @@
 :where(table) {
     border-collapse: collapse;
 }
+
+/* --------------------------------------------------------------------------- *\
+    Embedded Content
+\* --------------------------------------------------------------------------- */
+
+/*
+ * 1. Make elements display block for consistency (opinionated).
+ * 2. Remove the white space under the element in case its display is
+ *    overridden (opinionated).
+ * 3. Make elements responsive by default (opinionated).
+ */
+
+:where(img, picture, audio, canvas, iframe, svg, video) {
+    display: block; /* 1 */
+    vertical-align: middle; /* 2 */
+    max-width: 100%; /* 3 */
+}
+
+/**
+* Change the fill color to match the text color in all browsers (opinionated).
+*/
+
+:where(svg:not([fill])) {
+    fill: currentColor;
+}
