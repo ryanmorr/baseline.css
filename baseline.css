@@ -20,8 +20,8 @@
 }
 
 /**
-* Remove focus outline for mouse-based interactions (opinionated).
-*/
+ * Remove focus outline for mouse-based interactions (opinionated).
+ */
 
 *:focus:not(:focus-visible),
 *::before:focus:not(:focus-visible),
@@ -30,17 +30,17 @@
 }
 
 /**
-* 1. Improve consistency of default fonts in all browsers (opinionated).
-* 2. Add the default cursor in all browsers (opinionated).
-* 3. Change the line height in all browsers (opinionated)
-* 4. Use a 4-space tab width in all browsers (opinionated).
-* 5. Prevent adjustments of font size after orientation changes.
-* 6. Globally remove the tap highlight color in iOS and Android (opinionated).
-* 7. Use a better box model (opinionated).
-* 8. Breaks words to prevent overflow in all browsers (opinionated).
-* 9. Enable animated scrolling to anchor links (opinionated).
-* 10. Prevent unwanted layout shifts caused by scrollbars (opinionated).
-*/
+ * 1. Improve consistency of default fonts in all browsers (opinionated).
+ * 2. Add the default cursor in all browsers (opinionated).
+ * 3. Change the line height in all browsers (opinionated)
+ * 4. Use a 4-space tab width in all browsers (opinionated).
+ * 5. Prevent adjustments of font size after orientation changes.
+ * 6. Globally remove the tap highlight color in iOS and Android (opinionated).
+ * 7. Use a better box model (opinionated).
+ * 8. Breaks words to prevent overflow in all browsers (opinionated).
+ * 9. Enable animated scrolling to anchor links (opinionated).
+ * 10. Prevent unwanted layout shifts caused by scrollbars (opinionated).
+ */
 
 :where(:root) {
     font-family:
@@ -73,18 +73,18 @@
 }
 
 /**
-* Enable percentage-based heights
-*/
+ * Enable percentage-based heights
+ */
 
 :where(html, body) {
     height: 100%;
 }
 
 /*
-* 1. Remove animated scrolling when motion is reduced (opinionated).
-* 2. Remove animations when motion is reduced (opinionated).
-* 3. Remove transitions when motion is reduced (opinionated).
-*/
+ * 1. Remove animated scrolling when motion is reduced (opinionated).
+ * 2. Remove animations when motion is reduced (opinionated).
+ * 3. Remove transitions when motion is reduced (opinionated).
+ */
 
 @media (prefers-reduced-motion: reduce) {
     html {
@@ -140,8 +140,8 @@
 }
 
 /**
-* Change the fill color to match the text color in all browsers (opinionated).
-*/
+ * Change the fill color to match the text color in all browsers (opinionated).
+ */
 
 :where(svg:not([fill])) {
     fill: currentColor;
