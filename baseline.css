@@ -141,6 +141,7 @@
     display: block; /* 1 */
     vertical-align: middle; /* 2 */
     max-width: 100%; /* 3 */
+    height: auto; /* 3 */
 }
 
 /**
