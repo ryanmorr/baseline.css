@@ -6,8 +6,9 @@
 
 /**
  * 1. Remove the default styling in all browsers (opinionated).
- * 2. Remove repeating backgrounds in all browsers (opinionated).
- * 3. Add box model inheritance to allow overridding it when necessary (opinionated).
+ * 2. Remove borders and make styling consistent in all browsers (opinionated).
+ * 3. Remove repeating backgrounds in all browsers (opinionated).
+ * 4. Add box model inheritance to allow overridding it (opinionated).
  */
 
 *,
@@ -15,8 +16,11 @@
 *::after {
     margin: 0; /* 1 */
     padding: 0; /* 1 */
-    background-repeat: no-repeat; /* 2 */
-    box-sizing: inherit; /* 3 */
+    border-width: 0; /* 2 */
+    border-style: solid; /* 2 */
+    border-color: currentColor; /* 2 */
+    background-repeat: no-repeat; /* 3 */
+    box-sizing: inherit; /* 4 */
 }
 
 /**
