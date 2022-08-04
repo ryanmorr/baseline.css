@@ -3,34 +3,22 @@
   "description": "A modern and opinionated baseline stylesheet",
   "version": "1.0.0",
   "license": "Unlicense",
-  "homepage": "https://github.com/ryanmorr/baseline.css",
-  "main": "baseline.min.css",
-  "style": "baseline.min.css",
   "author": "Ryan Morr",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/ryanmorr/baseline.css.git"
-  },
-  "bugs": {
-    "url": "https://github.com/ryanmorr/baseline.css/issues"
-  },
+  "homepage": "https://github.com/ryanmorr/baseline.css",
+  "repository": "github:ryanmorr/baseline.css",
+  "bugs": "https://github.com/ryanmorr/baseline.css/issues",
   "publishConfig": {
     "access": "public"
   },
+  "main": "baseline.min.css",
+  "style": "baseline.min.css",
   "scripts": {
-    "compile": "cssnano baseline.css baseline.min.css",
-    "test": "stylelint baseline.css"
+    "test": "stylelint baseline.css",
+    "build": "cleancss -o baseline.min.css baseline.css"
   },
   "devDependencies": {
-    "cssnano-cli": "^1.0.5",
-    "stylelint": "^9.10.1",
-    "stylelint-config-standard": "^18.2.0"
-  },
-  "stylelint": {
-    "extends": "stylelint-config-standard",
-    "rules": {
-      "no-descending-specificity": null,
-      "indentation": 4
-    }
+    "clean-css-cli": "^5.6.1",
+    "stylelint": "^14.9.1",
+    "stylelint-config-standard": "^26.0.0"
   }
 }
