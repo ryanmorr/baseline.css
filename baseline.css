@@ -1,712 +1,103 @@
-/*! baseline.css v1.0.0 | Unlicense | github.com/ryanmorr/baseline.css */
+/*! baseline.css v2.0.0 | https://github.com/ryanmorr/baseline.css */
 
 /* --------------------------------------------------------------------------- *\
-    Document
+    Global
 \* --------------------------------------------------------------------------- */
-
-/**
- * 1. Use the default user interface font in all browsers (opinionated).
- * 2. Add the default cursor in all browsers (opinionated).
- * 3. Correct the line height in all browsers.
- * 4. Set a left text align to allow descendants to inherit their
- *    alignment (opinionated).
- * 5. Use a 4-space tab width in all browsers (opinionated).
- * 6. Prevent adjustments of font size after orientation changes in iOS.
- * 7. Globally remove the tap highlight color in iOS and Android (opinionated).
- * 8. Use a better box model (opinionated).
- * 9. Breaks words to prevent overflow in all browsers (opinionated).
- */
-
-:root {
-    font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        "Roboto",
-        "Oxygen",
-        "Ubuntu",
-        "Cantarell",
-        "Fira Sans",
-        "Droid Sans",
-        "Helvetica Neue",
-        sans-serif; /* 1 */
-
-    cursor: default; /* 2 */
-    line-height: 1.15; /* 3 */
-    text-align: left; /* 4 */
-    -moz-tab-size: 4; /* 5 */
-    tab-size: 4; /* 5 */
-    -webkit-text-size-adjust: 100%; /* 6 */
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /* 7 */
-    box-sizing: border-box; /* 8 */
-    word-break: break-word; /* 9 */
-}
 
 /**
  * 1. Remove the default styling in all browsers (opinionated).
  * 2. Remove repeating backgrounds in all browsers (opinionated).
- * 3. Add box model inheritance to allow overridding it when
- *    necessary (opinionated).
+ * 3. Add box model inheritance to allow overridding it when necessary (opinionated).
  */
 
 *,
-::after,
-::before {
+*::before,
+*::after {
     margin: 0; /* 1 */
     padding: 0; /* 1 */
-    background: transparent; /* 1 */
     background-repeat: no-repeat; /* 2 */
     box-sizing: inherit; /* 3 */
 }
 
 /**
- * 1. Add text decoration inheritance in all browsers (opinionated).
- * 2. Add vertical alignment inheritance in all browsers (opinionated).
- */
+* Remove focus outline for mouse-based interactions (opinionated).
+*/
 
-::before,
-::after {
-    text-decoration: inherit; /* 1 */
-    vertical-align: inherit; /* 2 */
-}
-
-/* --------------------------------------------------------------------------- *\
-    Typography
-\* --------------------------------------------------------------------------- */
-
-/**
- * Disable subpixel anti-aliasing and default to grayscale on high DPI
- * screens (opinionated).
- * Source: https://github.com/sindresorhus/modern-normalize/issues/19
- */
-
-@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-resolution: 2dppx) {
-    body {
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
-    }
+*:focus:not(:focus-visible),
+*::before:focus:not(:focus-visible),
+*::after:focus:not(:focus-visible) {
+    outline: none;
 }
 
 /**
- * Set font sizes for each heading level and switch to using rem units to
- * remove nested-shrinking sizes (opinionated).
- */
+* 1. Improve consistency of default fonts in all browsers (opinionated).
+* 2. Add the default cursor in all browsers (opinionated).
+* 3. Change the line height in all browsers (opinionated)
+* 4. Use a 4-space tab width in all browsers (opinionated).
+* 5. Prevent adjustments of font size after orientation changes.
+* 6. Globally remove the tap highlight color in iOS and Android (opinionated).
+* 7. Use a better box model (opinionated).
+* 8. Breaks words to prevent overflow in all browsers (opinionated).
+* 9. Enable animated scrolling to anchor links (opinionated).
+* 10. Prevent unwanted layout shifts caused by scrollbars (opinionated).
+*/
 
-h1 {
-    font-size: 2rem;
-}
-
-h2 {
-    font-size: 1.5rem;
-}
-
-h3 {
-    font-size: 1.17rem;
-}
-
-h4 {
-    font-size: 1rem;
-}
-
-h5 {
-    font-size: 0.83rem;
-}
-
-h6 {
-    font-size: 0.67rem;
-}
-
-/* --------------------------------------------------------------------------- *\
-    General Elements
-\* --------------------------------------------------------------------------- */
-
-/**
- * Remove the outline when hovering in all browsers (opinionated).
- */
-
-a:active,
-a:hover {
-    outline-width: 0;
-}
-
-/**
- * Add the correct height in Firefox.
- */
-
-hr {
-    height: 0;
-}
-
-/**
- * Remove the list style on unordered lists (opinionated).
- */
-
-ul {
-    list-style: none;
-}
-
-/**
- * Add the correct text decoration in Chrome, Edge, and Safari.
- */
-
-abbr[title] {
-    text-decoration: underline dotted;
-}
-
-/**
- * Add the correct font weight in Chrome, Edge, and Safari.
- */
-
-b,
-strong {
-    font-weight: bolder;
-}
-
-/**
- * Add the correct font size in all browsers.
- */
-
-small {
-    font-size: 80%;
-}
-
-/**
- * 1. Use the default monospace user interface font in all browsers (opinionated).
- * 2. Correct the odd `em` font sizing in all browsers.
- */
-
-code,
-kbd,
-samp,
-pre {
+:where(:root) {
     font-family:
-        Menlo,
-        Consolas,
-        Roboto Mono,
-        Ubuntu Monospace,
-        Noto Mono,
-        Oxygen Mono,
-        Liberation Mono,
-        monospace; /* 1 */
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        "Noto Sans",
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji"; /* 1 */
 
-    font-size: 1em; /* 2 */
+    cursor: default; /* 2 */
+    line-height: 1.15; /* 3 */
+    -moz-tab-size: 4; /* 4 */
+    tab-size: 4; /* 4 */
+    -webkit-text-size-adjust: 100%; /* 5 */
+    text-size-adjust: 100%; /* 5 */
+    -webkit-tap-highlight-color: transparent; /* 6 */
+    box-sizing: border-box; /* 7 */
+    overflow-wrap: break-word; /* 8 */
+    scroll-behavior: smooth; /* 9 */
+    scrollbar-gutter: stable; /* 10 */
+}
+
+/**
+* Enable percentage-based heights
+*/
+
+:where(html, body) {
+    height: 100%;
 }
 
 /*
- * Preserve new lines, spaces, and tabs but force text wrapping (opinionated).
- */
+* 1. Remove animated scrolling when motion is reduced (opinionated).
+* 2. Remove animations when motion is reduced (opinionated).
+* 3. Remove transitions when motion is reduced (opinionated).
+*/
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto !important; /* 1 */
+    }
 
-pre {
-    white-space: pre-wrap;
-}
-
-/**
- * 1. Make tables fill the entire width of their containers (opinionated).
- * 2. Collapse border spacing in all browsers (opinionated).
- * 3. Prevent coloumn overflow (opinionated).
- */
-
-table {
-    width: 100%; /* 1 */
-    border-collapse: collapse; /* 2 */
-    table-layout: fixed; /* 3 */
-}
-
-/**
- * 1. Inherit text alignment from ancestor (opinionated).
- * 2. Make font weight normal (opinionated).
- */
-
-td,
-th {
-    text-align: inherit; /* 1 */
-    font-weight: normal; /* 2 */
-}
-
-/**
- * Prevent `sub` and `sup` elements from affecting the line height in all browsers.
- */
-
-sub,
-sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
-}
-
-sub {
-    bottom: -0.25em;
-}
-
-sup {
-    top: -0.5em;
-}
-
-/**
- * Add italics not present in Safari and Chrome.
- */
-
-dfn {
-    font-style: italic;
-}
-
-/* --------------------------------------------------------------------------- *\
-    Forms
-\* --------------------------------------------------------------------------- */
-
-/**
- * 1. Inherit styling in all browsers (opinionated).
- * 2. Remove the default border style in all browsers (opinionated).
- */
-
-button,
-input,
-optgroup,
-select,
-textarea {
-    color: inherit; /* 1 */
-    font-family: inherit; /* 1 */
-    font-size: inherit; /* 1 */
-    line-height: inherit; /* 1 */
-    border-style: none; /* 2 */
-}
-
-/**
- * Restore the font weight unset by the previous rule.
- */
-
-optgroup {
-    font-weight: bold;
-}
-
-/**
- * Style select elements like a standard input (opinionated).
- */
-
-select {
-    -moz-appearance: none;
-    -webkit-appearance: none;
-}
-
-/**
- * Remove the inheritance of text transform in Edge and Firefox.
- * 1. Remove the inheritance of text transform in Firefox.
- */
-
-button,
-select { /* 1 */
-    text-transform: none;
-}
-
-/**
- * 1. Apply cursor pointer to button elements (opinionated).
- * 2. Correct the inability to style clickable types in iOS and Safari.
- */
-
-button,
-[type="button"],
-[type="reset"],
-[type="submit"] {
-    cursor: pointer; /* 1 */
-    -webkit-appearance: button; /* 2 */
-}
-
-/*
- * Prevent button text from being selectable (opinionated).
- */
-
-button {
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-/**
- * Restore button focus outline in Firefox due to transparent background reset.
- */
-
-button:focus {
-    outline: 1px dotted;
-    outline: 5px auto -webkit-focus-ring-color;
-}
-
-/**
- * Correct the text wrapping in Edge.
- */
-
-legend {
-    display: table;
-    max-width: 100%;
-    white-space: normal;
-}
-
-/*
- * Allow only vertical resizing of all textareas (opinionated).
- */
-
-textarea {
-    resize: vertical;
-}
-
-/*
- * Improve label alignment for tall form fields (opinionated).
- */
-
-select[multiple],
-select[size],
-textarea {
-    vertical-align: top;
-}
-
-/**
- * Remove the inner border and padding in Firefox.
- */
-
-::-moz-focus-inner {
-    border-style: none;
-    padding: 0;
-}
-
-/**
- * Restore the focus styles unset by the previous rule.
- */
-
-:-moz-focusring {
-    outline: 1px dotted ButtonText;
-}
-
-/**
- * Correct the cursor style of increment and decrement buttons in Safari.
- */
-
-::-webkit-inner-spin-button,
-::-webkit-outer-spin-button {
-    height: auto;
-}
-
-/**
- * 1. Correct the odd appearance in Chrome and Safari.
- * 2. Correct the outline style in Safari.
- */
-
-[type="search"] {
-    -webkit-appearance: textfield; /* 1 */
-    outline-offset: -2px; /* 2 */
-}
-
-/**
- * Remove the inner padding in Chrome and Safari on macOS.
- */
-
-[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
-}
-
-/**
- * 1. Correct the inability to style clickable types in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
- */
-
-::-webkit-file-upload-button {
-    -webkit-appearance: button; /* 1 */
-    font: inherit; /* 2 */
-}
-
-/**
- * Correct the text style of placeholders in Chrome, Edge, and Safari.
- */
-
-::-webkit-input-placeholder {
-    color: inherit;
-    opacity: 0.54;
-}
-
-/*
- * Change the cursor on disabled, not-editable, or otherwise inoperable
- * form elements in all browsers (opinionated).
- */
-
-button:disabled,
-input:disabled,
-select:disabled,
-textarea:disabled {
-    cursor: not-allowed;
-}
-
-/* --------------------------------------------------------------------------- *\
-    Embedded Content
-\* --------------------------------------------------------------------------- */
-
-/*
- * Remove the default white space at the bottom of the
- * element (opinionated).
- */
-
-img,
-audio,
-canvas,
-iframe,
-svg,
-video {
-    vertical-align: middle;
-}
-
-/*
- * Make media elements responsive (opinionated).
- */
-
-img,
-canvas,
-iframe,
-svg,
-video {
-    max-width: 100%;
-    height: auto;
-}
-
-/*
- * Offset `alt` text from surrounding copy (opinionated).
- */
-
-img {
-    font-style: italic;
-}
-
-/**
- * If `width` and/or `height` attributes are preset, disable the image's
- * responsive behavior (opinionated).
- */
-
-img[width],
-img[height] {
-    max-width: none;
-}
-
-/**
- * 1. Add the correct display in Edge.
- * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
- */
-
-progress {
-    display: inline-block; /* 1 */
-    vertical-align: baseline; /* 2 */
-}
-
-/**
- * Change the fill color to match the text color in all
- * browsers (opinionated).
- */
-
-svg:not([fill]) {
-    fill: currentColor;
-}
-
-/* --------------------------------------------------------------------------- *\
-    Interactive
-\* --------------------------------------------------------------------------- */
-
-/*
- * 1. Add the correct display in all browsers.
- * 2. Apply cursor pointer (opinionated).
- */
-
-summary {
-    display: list-item;
-    cursor: pointer;
-}
-
-/*
- * Add the correct styles in Edge and Safari.
- */
-
-dialog {
-    background-color: white;
-    border: solid;
-    color: black;
-    display: block;
-    height: -moz-fit-content;
-    height: -webkit-fit-content;
-    height: fit-content;
-    left: 0;
-    margin: auto;
-    padding: 1em;
-    position: absolute;
-    right: 0;
-    width: -moz-fit-content;
-    width: -webkit-fit-content;
-    width: fit-content;
-}
-
-dialog:not([open]) {
-    display: none;
-}
-
-/* --------------------------------------------------------------------------- *\
-    User Interaction
-\* --------------------------------------------------------------------------- */
-
-/**
- * Remove the focus outline on elements that should be focusable, but should
- * not be reachable via sequential keyboard navigation for mouse/pointer based
- * interactions (opinionated).
- */
-
-[tabindex="-1"]:focus:not(:focus-visible) {
-    outline: 0 !important;
-}
-
-/*
- * Remove the tapping delay on clickable elements in all browsers (opinionated).
- */
-
-a,
-area,
-button,
-input,
-label,
-select,
-summary,
-textarea,
-[tabindex] {
-    touch-action: manipulation;
-}
-
-/*
- * Specify text selection background color and omit drop shadow (opinionated).
- */
-
-::selection {
-    background-color: #b3d4fc;
-    color: #000;
-    text-shadow: none;
-}
-
-/* --------------------------------------------------------------------------- *\
-    Accessibility
-\* --------------------------------------------------------------------------- */
-
-/**
- * Change the cursor on busy elements in all browsers (opinionated).
- */
-
-[aria-busy="true"] {
-    cursor: progress;
-}
-
-/*
- * Change the cursor on control elements in all browsers (opinionated).
- */
-
-[aria-controls],
-[role="button"] {
-    cursor: pointer;
-}
-
-/*
- * Change the cursor on disabled, not-editable, or otherwise inoperable
- * elements in all browsers (opinionated).
- */
-
-[aria-disabled="true"],
-[disabled] {
-    cursor: default;
-}
-
-/*
- * Change the cursor on draggable elements in all browsers (opinionated).
- */
-
-[aria-grabbed="false"] {
-    cursor: move;
-    cursor: -webkit-grab;
-    cursor: -moz-grab;
-    cursor: grab;
-}
-
-[aria-grabbed="true"] {
-    cursor: -webkit-grabbing;
-    cursor: -moz-grabbing;
-    cursor: grabbing;
-}
-
-/*
- * Change the display on visually hidden accessible elements in all
- * browsers (opinionated).
- */
-
-[aria-hidden="false"][hidden]:not(:focus) {
-    clip: rect(0, 0, 0, 0);
-    display: inherit;
-    position: absolute;
-}
-
-/* --------------------------------------------------------------------------- *\
-    Print
-\* --------------------------------------------------------------------------- */
-
-/**
- * Optimize the page for printing (opinionated).
- * Source: https://github.com/h5bp/main.css/blob/master/src/_print.css
- */
-
-@media print {
     *,
     *::before,
     *::after {
-        background: transparent !important;
-        color: #000 !important;
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]::after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]::after {
-        content: " (" attr(title) ")";
-    }
-
-    a[href^="#"]::after,
-    a[href^="javascript:"]::after {
-        content: "";
-    }
-
-    pre {
-        white-space: pre-wrap !important;
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    thead {
-        display: table-header-group;
-    }
-
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
+        scroll-behavior: auto !important; /* 1 */
+        animation-duration: 0.01ms !important; /* 2 */
+        animation-iteration-count: 1 !important; /* 2 */
+        transition-duration: 0.01ms !important; /* 3 */
+        transition-delay: 0s !important; /* 3 */
     }
 }
