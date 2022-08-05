@@ -36,7 +36,7 @@
 /**
  * 1. Improve consistency of default fonts (opinionated).
  * 2. Add the default cursor (opinionated).
- * 3. Change the line height (opinionated)
+ * 3. Set a consistent and sensible line height (opinionated).
  * 4. Use a 4-space tab width (opinionated).
  * 5. Prevent adjustments of font size after orientation changes.
  * 6. Globally remove the tap highlight color in iOS and Android (opinionated).
@@ -64,7 +64,7 @@
         "Noto Color Emoji"; /* 1 */
 
     cursor: default; /* 2 */
-    line-height: 1.15; /* 3 */
+    line-height: 1.5; /* 3 */
     -moz-tab-size: 4; /* 4 */
     tab-size: 4; /* 4 */
     -webkit-text-size-adjust: 100%; /* 5 */
