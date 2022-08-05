@@ -141,7 +141,14 @@
     display: block; /* 1 */
     vertical-align: middle; /* 2 */
     max-width: 100%; /* 3 */
-    height: auto; /* 3 */
+}
+
+/**
+ * Maintain aspect ratio when the element is resized (opinionated).
+ */
+
+:where(img, picture, iframe, video) {
+    height: auto;
 }
 
 /**
