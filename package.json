@@ -1,6 +1,6 @@
 {
   "name": "@ryanmorr/baseline.css",
-  "description": "A modern and opinionated baseline stylesheet",
+  "description": "Just another CSS reset, normalization, and optimization library",
   "version": "1.0.0",
   "license": "Unlicense",
   "author": "Ryan Morr",
