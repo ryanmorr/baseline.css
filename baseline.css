@@ -301,8 +301,7 @@
  * Change the cursor on actionable elements
  */
 
-[aria-controls],
-[role="button"] {
+:where([aria-controls], [role="button"]) {
     cursor: pointer;
 }
 
