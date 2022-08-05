@@ -77,7 +77,7 @@
 }
 
 /**
- * Enable percentage-based heights
+ * Enable percentage based heights (opinionated).
  */
 
 :where(html, body) {
@@ -111,7 +111,7 @@
 \* --------------------------------------------------------------------------- */
 
 /**
- * Remove list styles for unordered lists and menus
+ * Remove list styles for unordered lists and menus (opinionated).
  */
 
 :where(ul, menu) {
@@ -127,14 +127,14 @@
 }
 
 /* --------------------------------------------------------------------------- *\
-    Embedded Content
+    Media
 \* --------------------------------------------------------------------------- */
 
 /*
  * 1. Make elements display block for consistency (opinionated).
  * 2. Remove the white space under the element in case its display is
  *    overridden (opinionated).
- * 3. Make elements responsive by default (opinionated).
+ * 3. Make media elements responsive (opinionated).
  */
 
 :where(img, picture, audio, canvas, iframe, svg, video) {
@@ -157,4 +157,108 @@
 
 :where(svg:not([fill])) {
     fill: currentColor;
+}
+
+/* --------------------------------------------------------------------------- *\
+    Forms
+\* --------------------------------------------------------------------------- */
+
+/**
+ * 1. Normalize the inconsistent appearance between browsers (opinionated).
+ * 2. Inherit the typography from the parent element (opinionated).
+ */
+
+:where(button, input, select, textarea) {
+    background-color: transparent; /* 1 */
+    color: inherit; /* 1 */
+    font: inherit; /* 2 */
+}
+
+/**
+ * Remove the default appearance (opinionated).
+ */
+
+:where(select) {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
+}
+
+/**
+ * Make form fields responsive (opinionated).
+ */
+
+:where(input, select, textarea) {
+    height: auto;
+    max-width: 100%;
+}
+
+/**
+ * Correct the inability to style buttons in iOS and Safari.
+ */
+
+:where(button, [type="button" i], [type="reset" i], [type="submit" i]) {
+    -webkit-appearance: button;
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Edge, and Firefox.
+ */
+
+:where(progress) {
+    vertical-align: baseline;
+}
+
+/**
+ * Enable vertical resizing (opinionated).
+ */
+
+:where(textarea) {
+    resize: vertical;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome, Edge, and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+
+:where([type="search" i]) {
+    -webkit-appearance: textfield; /* 1 */
+    outline-offset: -2px; /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Safari.
+ */
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+    height: auto;
+}
+
+/**
+ * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ */
+
+::-webkit-input-placeholder {
+    color: inherit;
+    opacity: 0.54;
+}
+
+/**
+ * Remove the inner padding in Chrome, Edge, and Safari on macOS.
+ */
+
+::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style upload buttons in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button; /* 1 */
+    font: inherit; /* 2 */
 }
