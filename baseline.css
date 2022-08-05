@@ -5,10 +5,10 @@
 \* --------------------------------------------------------------------------- */
 
 /**
- * 1. Remove the default margin and padding of all elements (opinionated).
- * 2. Remove default borders and make border styling consistent (opinionated).
- * 3. Remove repeating backgrounds (opinionated).
- * 4. Add box model inheritance to allow overridding it (opinionated).
+ * 1. Remove the default margin and padding of all elements
+ * 2. Remove default borders and make border styling consistent
+ * 3. Remove repeating backgrounds
+ * 4. Add box model inheritance to allow overridding it
  */
 
 *,
@@ -24,7 +24,7 @@
 }
 
 /**
- * Remove focus outline for mouse/pointer based interactions (opinionated).
+ * Remove focus outline for mouse/pointer based interactions
  */
 
 *:focus:not(:focus-visible),
@@ -34,16 +34,16 @@
 }
 
 /**
- * 1. Improve consistency of default fonts (opinionated).
- * 2. Add the default cursor (opinionated).
- * 3. Set a consistent and sensible line height (opinionated).
- * 4. Use a 4-space tab width (opinionated).
- * 5. Prevent adjustments of font size after orientation changes.
- * 6. Globally remove the tap highlight color in iOS and Android (opinionated).
- * 7. Use a better box model (opinionated).
- * 8. Breaks words to prevent overflow (opinionated).
- * 9. Enable animated scrolling to anchor links (opinionated).
- * 10. Prevent unwanted layout shifts caused by scrollbars (opinionated).
+ * 1. Improve consistency of default fonts
+ * 2. Add the default cursor
+ * 3. Set a consistent and sensible line height
+ * 4. Use a 4-space tab width
+ * 5. Prevent adjustments of font size after orientation changes
+ * 6. Globally remove the tap highlight color in iOS and Android
+ * 7. Use a better box model
+ * 8. Breaks words to prevent overflow
+ * 9. Enable animated scrolling to anchor links
+ * 10. Prevent unwanted layout shifts caused by scrollbars
  */
 
 :where(:root) {
@@ -77,7 +77,7 @@
 }
 
 /**
- * Enable percentage based heights (opinionated).
+ * Enable percentage based heights
  */
 
 :where(html, body) {
@@ -85,9 +85,9 @@
 }
 
 /*
- * 1. Remove animated scrolling when motion is reduced (opinionated).
- * 2. Remove animations when motion is reduced (opinionated).
- * 3. Remove transitions when motion is reduced (opinionated).
+ * 1. Remove animated scrolling when motion is reduced
+ * 2. Remove animations when motion is reduced
+ * 3. Remove transitions when motion is reduced
  */
 
 @media (prefers-reduced-motion: reduce) {
@@ -111,7 +111,19 @@
 \* --------------------------------------------------------------------------- */
 
 /**
- * Remove list styles for unordered lists and menus (opinionated).
+ * 1. Correct border color in Firefox
+ * 2. Add the correct box sizing in Firefox
+ * 3. Ensure horizontal rules are visible
+ */
+
+:where(hr) {
+    color: inherit; /* 1 */
+    height: 0; /* 2 */
+    border-top-width: 1px; /* 3 */
+}
+
+/**
+ * Remove list styles for unordered lists and menus
  */
 
 :where(ul, menu) {
@@ -119,11 +131,27 @@
 }
 
 /**
- * Collapse border spacing (opinionated).
+ * Collapse border spacing
  */
 
 :where(table) {
     border-collapse: collapse;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari
+ */
+
+:where(b, strong) {
+    font-weight: bolder;
+}
+
+/**
+ * Add the correct font size
+ */
+
+:where(small) {
+    font-size: 80%;
 }
 
 /* --------------------------------------------------------------------------- *\
@@ -131,10 +159,10 @@
 \* --------------------------------------------------------------------------- */
 
 /*
- * 1. Make elements display block for consistency (opinionated).
+ * 1. Make elements display block for consistency
  * 2. Remove the white space under the element in case its display is
- *    overridden (opinionated).
- * 3. Make media elements responsive (opinionated).
+ *    overridden
+ * 3. Make media elements responsive
  */
 
 :where(img, picture, audio, canvas, iframe, svg, video) {
@@ -144,7 +172,7 @@
 }
 
 /**
- * Maintain aspect ratio when the element is resized (opinionated).
+ * Maintain aspect ratio when the element is resized
  */
 
 :where(img, picture, iframe, video) {
@@ -152,7 +180,7 @@
 }
 
 /**
- * Change the fill color to match the text color (opinionated).
+ * Change the fill color to match the text color
  */
 
 :where(svg:not([fill])) {
@@ -164,8 +192,8 @@
 \* --------------------------------------------------------------------------- */
 
 /**
- * 1. Normalize the inconsistent appearance between browsers (opinionated).
- * 2. Inherit the typography from the parent element (opinionated).
+ * 1. Normalize the inconsistent appearance between browsers
+ * 2. Inherit the typography from the parent element
  */
 
 :where(button, input, select, textarea) {
@@ -175,7 +203,7 @@
 }
 
 /**
- * Remove the default appearance (opinionated).
+ * Remove the default appearance
  */
 
 :where(select) {
@@ -185,7 +213,7 @@
 }
 
 /**
- * Make form fields responsive (opinionated).
+ * Make form fields responsive
  */
 
 :where(input, select, textarea) {
@@ -194,7 +222,7 @@
 }
 
 /**
- * Correct the inability to style buttons in iOS and Safari.
+ * Correct the inability to style buttons in iOS and Safari
  */
 
 :where(button, [type="button" i], [type="reset" i], [type="submit" i]) {
@@ -202,7 +230,7 @@
 }
 
 /**
- * Add the correct vertical alignment in Chrome, Edge, and Firefox.
+ * Add the correct vertical alignment in Chrome, Edge, and Firefox
  */
 
 :where(progress) {
@@ -210,7 +238,7 @@
 }
 
 /**
- * Enable vertical resizing (opinionated).
+ * Enable vertical resizing
  */
 
 :where(textarea) {
@@ -218,8 +246,8 @@
 }
 
 /**
- * 1. Correct the odd appearance in Chrome, Edge, and Safari.
- * 2. Correct the outline style in Safari.
+ * 1. Correct the odd appearance in Chrome, Edge, and Safari
+ * 2. Correct the outline style in Safari
  */
 
 :where([type="search" i]) {
@@ -228,7 +256,7 @@
 }
 
 /**
- * Correct the cursor style of increment and decrement buttons in Safari.
+ * Correct the cursor style of increment and decrement buttons in Safari
  */
 
 ::-webkit-inner-spin-button,
@@ -237,7 +265,7 @@
 }
 
 /**
- * Correct the text style of placeholders in Chrome, Edge, and Safari.
+ * Correct the text style of placeholders in Chrome, Edge, and Safari
  */
 
 ::-webkit-input-placeholder {
@@ -246,7 +274,7 @@
 }
 
 /**
- * Remove the inner padding in Chrome, Edge, and Safari on macOS.
+ * Remove the inner padding in Chrome, Edge, and Safari on macOS
  */
 
 ::-webkit-search-decoration {
@@ -254,8 +282,8 @@
 }
 
 /**
- * 1. Correct the inability to style upload buttons in iOS and Safari.
- * 2. Change font properties to `inherit` in Safari.
+ * 1. Correct the inability to style upload buttons in iOS and Safari
+ * 2. Change font properties to `inherit` in Safari
  */
 
 ::-webkit-file-upload-button {
@@ -268,7 +296,7 @@
 \* ------------------------------------------------------------------ */
 
 /**
- * Change the cursor on busy elements (opinionated).
+ * Change the cursor on busy elements
  */
 
 :where([aria-busy="true" i]) {
@@ -276,7 +304,7 @@
 }
 
 /*
- * Change the cursor on actionable elements (opinionated).
+ * Change the cursor on actionable elements
  */
 
 [aria-controls],
@@ -286,7 +314,7 @@
 
 /*
  * Change the cursor on disabled, not-editable, or otherwise
- * inoperable elements (opinionated).
+ * inoperable elements
  */
 
 :where([aria-disabled="true" i], [disabled]) {
