@@ -27,9 +27,7 @@
  * Remove focus outline for mouse/pointer based interactions
  */
 
-:focus:not(:focus-visible),
-*::before:focus:not(:focus-visible),
-*::after:focus:not(:focus-visible) {
+:where(:focus:not(:focus-visible)) {
     outline: none;
 }
 
