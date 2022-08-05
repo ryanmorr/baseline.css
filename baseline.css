@@ -262,3 +262,33 @@
     -webkit-appearance: button; /* 1 */
     font: inherit; /* 2 */
 }
+
+/* ------------------------------------------------------------------ *\
+    Accessibility
+\* ------------------------------------------------------------------ */
+
+/**
+ * Change the cursor on busy elements (opinionated).
+ */
+
+:where([aria-busy="true" i]) {
+    cursor: progress;
+}
+
+/*
+ * Change the cursor on actionable elements (opinionated).
+ */
+
+[aria-controls],
+[role="button"] {
+    cursor: pointer;
+}
+
+/*
+ * Change the cursor on disabled, not-editable, or otherwise
+ * inoperable elements (opinionated).
+ */
+
+:where([aria-disabled="true" i], [disabled]) {
+    cursor: not-allowed;
+}
