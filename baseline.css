@@ -77,7 +77,7 @@
 }
 
 /**
- * Enable percentage based heights
+ * Enable percentage-based heights
  */
 
 :where(html, body) {
@@ -91,10 +91,6 @@
  */
 
 @media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto !important; /* 1 */
-    }
-
     *,
     *::before,
     *::after {
