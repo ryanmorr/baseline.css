@@ -5,9 +5,9 @@
 \* --------------------------------------------------------------------------- */
 
 /**
- * 1. Remove the default styling in all browsers (opinionated).
- * 2. Remove borders and make styling consistent in all browsers (opinionated).
- * 3. Remove repeating backgrounds in all browsers (opinionated).
+ * 1. Remove the default margin and padding of all elements (opinionated).
+ * 2. Remove default borders and make border styling consistent (opinionated).
+ * 3. Remove repeating backgrounds (opinionated).
  * 4. Add box model inheritance to allow overridding it (opinionated).
  */
 
@@ -24,7 +24,7 @@
 }
 
 /**
- * Remove focus outline for mouse-based interactions (opinionated).
+ * Remove focus outline for mouse/pointer based interactions (opinionated).
  */
 
 *:focus:not(:focus-visible),
@@ -34,14 +34,14 @@
 }
 
 /**
- * 1. Improve consistency of default fonts in all browsers (opinionated).
- * 2. Add the default cursor in all browsers (opinionated).
- * 3. Change the line height in all browsers (opinionated)
- * 4. Use a 4-space tab width in all browsers (opinionated).
+ * 1. Improve consistency of default fonts (opinionated).
+ * 2. Add the default cursor (opinionated).
+ * 3. Change the line height (opinionated)
+ * 4. Use a 4-space tab width (opinionated).
  * 5. Prevent adjustments of font size after orientation changes.
  * 6. Globally remove the tap highlight color in iOS and Android (opinionated).
  * 7. Use a better box model (opinionated).
- * 8. Breaks words to prevent overflow in all browsers (opinionated).
+ * 8. Breaks words to prevent overflow (opinionated).
  * 9. Enable animated scrolling to anchor links (opinionated).
  * 10. Prevent unwanted layout shifts caused by scrollbars (opinionated).
  */
@@ -114,12 +114,12 @@
  * Remove list styles for unordered lists and menus
  */
 
- :where(ul, menu) {
+:where(ul, menu) {
     list-style: none;
 }
 
 /**
- * Collapse border spacing in all browsers (opinionated).
+ * Collapse border spacing (opinionated).
  */
 
 :where(table) {
@@ -145,7 +145,7 @@
 }
 
 /**
- * Change the fill color to match the text color in all browsers (opinionated).
+ * Change the fill color to match the text color (opinionated).
  */
 
 :where(svg:not([fill])) {
