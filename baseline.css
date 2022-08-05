@@ -18,7 +18,7 @@
     padding: 0; /* 1 */
     border-width: 0; /* 2 */
     border-style: solid; /* 2 */
-    border-color: currentColor; /* 2 */
+    border-color: currentcolor; /* 2 */
     background-repeat: no-repeat; /* 3 */
     box-sizing: inherit; /* 4 */
 }
@@ -27,7 +27,7 @@
  * Remove focus outline for mouse/pointer based interactions
  */
 
-*:focus:not(:focus-visible),
+:focus:not(:focus-visible),
 *::before:focus:not(:focus-visible),
 *::after:focus:not(:focus-visible) {
     outline: none;
@@ -180,7 +180,7 @@
  */
 
 :where(svg:not([fill])) {
-    fill: currentColor;
+    fill: currentcolor;
 }
 
 /* --------------------------------------------------------------------------- *\
